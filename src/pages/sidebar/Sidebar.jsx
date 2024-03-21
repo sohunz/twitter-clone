@@ -13,7 +13,7 @@ import { RiMoreLine } from "react-icons/ri";
 
 const Sidebar = () => {
     return (
-        <div className=" min-w-[260px] max-w-[260px] min-h-screen ">
+        <div className=" min-w-[260px] max-w-[260px] min-h-screen border-r ">
             <div className="w-full h-screen flex flex-col gap-3 justify-between px-2">
                 <div>
                     <div className=" px-1 pt-1">

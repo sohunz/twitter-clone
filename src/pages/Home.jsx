@@ -16,7 +16,7 @@ const Home = () => {
                     {/* <div className="sticky top-0 z-50">
                         <Navbar />
                     </div> */}
-                    <div className="flex gap-5">
+                    <div className="flex">
                         <Feed />
                         <Trending />
                     </div>
