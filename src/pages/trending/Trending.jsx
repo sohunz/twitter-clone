@@ -8,8 +8,8 @@ const Trending = () => {
             <div className="a sticky z-50 top-0">
                 <TrendingNav />
             </div>
-            <div className=" ">
-                <div className="border rounded-2xl p-3 mt-3">
+            <div className="mt-7">
+                <div className="rounded-2xl p-3 mt-3 bg-[#1E2732]">
                     <p className="text-xl font-bold mb-1">
                         Subscribe to Premium
                     </p>
@@ -21,7 +21,7 @@ const Trending = () => {
                         Subscribe
                     </button>
                 </div>
-                <div className="border rounded-2xl py-2 mt-3 overflow-hidden">
+                <div className="bg-[#1E2732] rounded-2xl py-2 mt-3 overflow-hidden">
                     <p className="text-xl mb-3 px-3 font-bold p-2">
                         Tranding for you
                     </p>
@@ -31,7 +31,7 @@ const Trending = () => {
                                 <p className="text-gray-400 text-[13px]">
                                     Music Trending
                                 </p>
-                                <p>Travis Scott</p>
+                                <p className="font-bold">Travis Scott</p>
                                 <p className="text-gray-400 text-[13px]">
                                     100K posts
                                 </p>
@@ -45,7 +45,7 @@ const Trending = () => {
                                 <p className="text-gray-400 text-[13px]">
                                     Music Trending
                                 </p>
-                                <p>Travis Scott</p>
+                                <p className="font-bold">Travis Scott</p>
                                 <p className="text-gray-400 text-[13px]">
                                     100K posts
                                 </p>
@@ -59,7 +59,7 @@ const Trending = () => {
                                 <p className="text-gray-400 text-[13px]">
                                     Music Trending
                                 </p>
-                                <p>Travis Scott</p>
+                                <p className="font-bold">Travis Scott</p>
                                 <p className="text-gray-400 text-[13px]">
                                     100K posts
                                 </p>
@@ -73,7 +73,7 @@ const Trending = () => {
                         </p>
                     </ul>
                 </div>
-                <div className="border rounded-2xl py-2 mt-3 overflow-hidden">
+                <div className="bg-[#1E2732] rounded-2xl py-2 mt-3 overflow-hidden">
                     <p className="text-xl mb-3 font-bold py-2 px-3">
                         Who to follow
                     </p>

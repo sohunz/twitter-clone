@@ -1,20 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const FeedNav = () => {
+    const [activeTab, setActiveTab] = useState("Following");
+
+    const handleTabClick = (tab) => {
+        setActiveTab(tab);
+    };
+
     return (
-        <div className=" w-full bg-[#15202B] border-b">
+        <div className="w-full bg-[#15202B] border-gray-700 border-b">
             <div className="flex justify-between items-center">
                 <ul className="w-full h-full flex items-center justify-between">
-                    <li className="w-full text-center py-4 hover:bg-gray-700 cursor-pointer duration-200">
-                        For you
-                    </li>
-                    <li className="w-full text-center py-4 hover:bg-gray-700 cursor-pointer duration-200">
+                    <Link
+                        to="/foryou"
+                        className={`w-full text-center py-4 hover:bg-gray-700 cursor-pointer ${
+                            activeTab === "For You"
+                                ? "border-b-2 border-blue-500 outline-4"
+                                : ""
+                        }`}
+                        onClick={() => handleTabClick("For You")}
+                    >
+                        For You
+                    </Link>
+                    <Link
+                        to="/following"
+                        className={`w-full text-center py-4 hover:bg-gray-700 cursor-pointer  ${
+                            activeTab === "Following"
+                                ? "border-b-2 border-blue-500"
+                                : ""
+                        }`}
+                        onClick={() => handleTabClick("Following")}
+                    >
                         Following
-                    </li>
+                    </Link>
                 </ul>
                 <div className="w-[60px] h-[60px] flex justify-center items-center">
-                    <div className=" w-[40px] h-[40px] flex items-center justify-center hover:bg-gray-700 rounded-full cursor-pointer">
+                    <div className="w-[40px] h-[40px] flex items-center justify-center hover:bg-gray-700 rounded-full cursor-pointer">
                         <IoSettingsOutline size={20} />
                     </div>
                 </div>
@@ -23,4 +46,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default FeedNav;
