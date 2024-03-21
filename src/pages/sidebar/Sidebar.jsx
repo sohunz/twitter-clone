@@ -76,7 +76,6 @@ const Sidebar = () => {
                                 class="w-full h-full object-cover"
                             />
                         </div>
-
                         <div>
                             <p>Olivia Rodrigo</p>
                             <p className="text-gray-500">@love</p>
