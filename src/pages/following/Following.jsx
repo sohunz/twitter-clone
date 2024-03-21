@@ -21,14 +21,14 @@ const Following = () => {
                 <div className="">
                     <div className="flex items-center gap-2">
                         <span className="flex items-center gap-1">
-                            <p>TRAVIS SCOTT</p>
+                            <p className="font-bold">Gracie Abrams</p>
                             <RiVerifiedBadgeFill
                                 size={18}
                                 className="text-[#1D9BF0]"
                             />
                         </span>
                         <div className="flex items-center gap-0">
-                            <p className="text-gray-400">@RealMadrid</p>
+                            <p className="text-gray-400">@GracieAbrams</p>
                             <div className="">
                                 <PiDotLight />
                             </div>
@@ -42,9 +42,9 @@ const Following = () => {
                             deserunt molestiae, est, dolore consequatur totam
                             sed sunt iure voluptatem numquam fuga! Ratione quo
                         </p>
-                        <div className="rounded-2xl overflow-hidden mt-5">
+                        <div className="rounded-2xl overflow-hidden mt-5 max-w-[538px] max-h-[660px]">
                             <img
-                                src="https://pbs.twimg.com/media/F5eaC7dWgAATGGN?format=jpg&name=small"
+                                src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/19472/hero-19472-490933394.jpg?itok=OL8vUk6I"
                                 alt=""
                             />
                         </div>
@@ -54,7 +54,7 @@ const Following = () => {
                                     size={18}
                                     className="text-gray-400"
                                 />
-                                <p className="text-[14px] text-gray-400">10K</p>
+                                <p className="text-[14px] text-gray-400">450</p>
                             </div>
                             <div className="flex items-center gap-2">
                                 <FaRetweet

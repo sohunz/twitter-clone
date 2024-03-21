@@ -14,6 +14,8 @@ const Feed = () => {
                 <Outlet />
                 <Outlet />
                 <Outlet />
+                <Outlet />
+                <Outlet />
             </div>
         </div>
     );

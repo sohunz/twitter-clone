@@ -13,9 +13,6 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="flex-1">
-                    {/* <div className="sticky top-0 z-50">
-                        <Navbar />
-                    </div> */}
                     <div className="flex gap-8">
                         <Feed />
                         <Trending />

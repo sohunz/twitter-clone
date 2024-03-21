@@ -28,7 +28,7 @@ const Sidebar = () => {
                         </li>
                         <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
                             <FiSearch size={28} />
-                            <p>Search</p>
+                            <p>Explore</p>
                         </li>
                         <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
                             <RiNotification4Line size={28} />
