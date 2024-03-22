@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 
 const TrendingNav = () => {
     return (
-        <div className="w-full py-1 bg-[#15202B]">
+        <div className="w-full py-2 bg-[#15202B]">
             <div className="relative">
                 <FiSearch
                     size={19}

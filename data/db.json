@@ -1,24 +1,61 @@
 {
-    "posts": [
-        {
-            "id": "c730",
-            "title": "Hello, First Tweet!",
-            "image": ""
-        }
-    ],
-    "trending": [
-        {
-            "id": "1",
-            "category": "Football",
-            "title": "Cristiano Ronaldo",
-            "posts": "950K"
-        }
-    ],
-    "peoples": [
-        {
-            "id": "1",
-            "name": "Travis Scott",
-            "username": "TravisScott"
-        }
-    ]
+  "posts": [
+    {
+      "id": "6852",
+      "title": "Hello",
+      "image": ""
+    }
+  ],
+  "trending": [
+    {
+      "id": "1",
+      "category": "Trending",
+      "title": "Cristiano Ronaldo",
+      "posts": "2M"
+    },
+    {
+      "id": "2",
+      "category": "Music Trending",
+      "title": "#TravisScott",
+      "posts": "520K"
+    },
+    {
+      "id": "3",
+      "category": "Technology",
+      "title": "Mac Book Pro M3",
+      "posts": "950K"
+    },
+    {
+      "id": "4",
+      "category": "Education",
+      "title": "Harvard University",
+      "posts": "327K"
+    },
+    {
+      "id": "5",
+      "category": "Auto Cars",
+      "title": "#NissanGTR",
+      "posts": "327K"
+    }
+  ],
+  "peoples": [
+    {
+      "id": 1,
+      "name": "Travis Scott",
+      "username": "TravisScott",
+      "image": "https://pbs.twimg.com/profile_images/634514155261833216/czgYrPLQ_400x400.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Toni Kroos",
+      "username": "ToniKroos",
+      "image": "https://pbs.twimg.com/profile_images/1144875187508338688/0MtdI4-f_400x400.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Metro Boomin",
+      "username": "MetroBoomin",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebdf9a1555f53a20087b8c5a5c"
+    }
+  ]
 }

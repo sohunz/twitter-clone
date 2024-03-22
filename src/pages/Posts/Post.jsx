@@ -82,11 +82,11 @@ const Post = () => {
                 try {
                     Resizer.imageFileResizer(
                         file,
-                        538, // new width
-                        660, // new height
-                        "JPEG", // compress format
-                        80, // quality
-                        0, // rotation
+                        538,
+                        660,
+                        "JPEG",
+                        80,
+                        0,
                         (uri) => {
                             setGetInput({ ...getInput, image: uri });
                         },
@@ -103,6 +103,7 @@ const Post = () => {
 
     const submit = () => {
         axios.post("http://localhost:8000/posts", getInput);
+        setGetInput({ ...getInput, title: "" });
     };
 
     return (

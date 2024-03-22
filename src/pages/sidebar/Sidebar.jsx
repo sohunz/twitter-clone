@@ -68,7 +68,7 @@ const Sidebar = () => {
                     </ul>
                 </div>
                 <div className="flex justify-between items-center py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5">
-                    <div className="flex gap-3">
+                    <div className="flex gap-2">
                         <div className="rounded-full overflow-hidden w-[50px] h-[50px]">
                             <img
                                 src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1711065600&semt=ais"
@@ -77,8 +77,8 @@ const Sidebar = () => {
                             />
                         </div>
                         <div>
-                            <p>Twitter</p>
-                            <p className="text-gray-500">@Twitter</p>
+                            <p className="font-bold text-[16px]">Twitter</p>
+                            <p className="text-gray-400">@Twitter</p>
                         </div>
                     </div>
                     <div>

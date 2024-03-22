@@ -10,7 +10,7 @@ const Trend = () => {
             {trend.map((item) => {
                 return (
                     <li
-                        className="flex justify-between items-start hover:bg-gray-700 py-2 px-4"
+                        className="flex justify-between items-start hover:bg-gray-700 py-2 px-5"
                         key={item.id}
                     >
                         <div key={item.id}>

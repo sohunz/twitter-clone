@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DataContext from "./DataContext";
 import db from "../../data/db.json";
 
