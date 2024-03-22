@@ -1,21 +1,14 @@
 {
   "posts": [
     {
-      "id": "ad1e",
-      "title": "Hello, First Tweet."
-    },
-    {
-      "id": "6d5d",
-      "title": "Welcome to the new world."
-    },
-    {
-      "id": "91e5",
-      "title": "I miss You"
+      "id": "36a7",
+      "title": "Real Madrid",
+      "image": ""
     }
   ],
   "trending": [
     {
-      "id": 1,
+      "id": "1",
       "category": "Music Trending",
       "title": "Taylor Swift",
       "posts": "123K"
@@ -23,7 +16,7 @@
   ],
   "peoples": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Gracie Abrams",
       "username": "GracieAbrams"
     }

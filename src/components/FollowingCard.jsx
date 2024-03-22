@@ -24,7 +24,7 @@ const FollowingCard = () => {
                     >
                         <div className="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]">
                             <img
-                                src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
+                                src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1711065600&semt=ais"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -32,18 +32,20 @@ const FollowingCard = () => {
                         <div className="w-full">
                             <div className="flex items-center gap-2">
                                 <span className="flex items-center gap-1">
-                                    <p className="font-bold">Twitter</p>
+                                    <p className="font-bold text-[17px]">
+                                        Twitter
+                                    </p>
                                     <RiVerifiedBadgeFill
                                         size={18}
                                         className="text-[#1D9BF0]"
                                     />
                                 </span>
                                 <div className="flex items-center gap-0">
-                                    <p className="text-gray-400">@twitter</p>
+                                    <p className="text-gray-400">@Twitter</p>
                                     <div className="">
                                         <PiDotLight />
                                     </div>
-                                    <p className="text-gray-400">June 23</p>
+                                    <p className="text-gray-400">1m</p>
                                 </div>
                             </div>
                             <div>
@@ -94,13 +96,15 @@ const FollowingCard = () => {
                                             className="text-gray-400"
                                         />
                                         <p className="text-[14px] text-gray-400">
-                                            120K
+                                            25K
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <RiMoreLine size={20} />
+                        <span className=" cursor-pointer">
+                            <RiMoreLine size={20} />
+                        </span>
                     </div>
                 );
             })}
