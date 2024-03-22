@@ -5,6 +5,7 @@ import Following from "./pages/following/Following";
 import ForYou from "./pages/foryou/ForYou";
 import DataProvider from "./contexts/DataProvider";
 import ToggleProvider from "./contexts/ToggleProvider";
+import EditPost from "./pages/Posts/EditPost";
 
 const App = () => {
     return (
@@ -14,6 +15,10 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Home />}>
                             <Route path="following" element={<Following />} />
+                            <Route
+                                path="/following/:id"
+                                element={<EditPost />}
+                            />
                             <Route path="foryou" element={<ForYou />} />
                         </Route>
                     </Routes>
