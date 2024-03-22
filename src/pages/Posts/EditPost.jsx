@@ -27,14 +27,16 @@ const EditPost = () => {
                 placeholder="New Title"
                 className="w-full py-3 pl-7 pr-5 rounded-full bg-gray-800 outline-none mb-3"
                 onChange={(e) => setNewTitle(e.target.value)}
-            />
-            <Link
-                to="/following"
-                onClick={() => editPostTitle(id)}
-                className=" bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer"
-            >
-                Update
-            </Link>
+            />{" "}
+            <div className="mt-3">
+                <Link
+                    to="/following"
+                    onClick={() => editPostTitle(id)}
+                    className=" bg-[#1D9BF0] px-5 py-[9px] rounded-full cursor-pointer"
+                >
+                    Update
+                </Link>
+            </div>
         </div>
     );
 };
