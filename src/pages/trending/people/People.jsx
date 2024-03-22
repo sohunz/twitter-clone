@@ -9,7 +9,7 @@ const People = () => {
         <ul>
             {peoples.map((item) => {
                 return (
-                    <li className="hover:bg-gray-700 py-4 px-3">
+                    <li className="hover:bg-gray-700 py-4 px-3" key={item.id}>
                         <div className="flex items-center justify-between">
                             <div className="flex gap-3">
                                 <div className="rounded-full overflow-hidden w-[40px] h-[40px]">

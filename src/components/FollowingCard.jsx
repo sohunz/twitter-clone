@@ -10,13 +10,17 @@ import DataContext from "../contexts/DataContext";
 
 const FollowingCard = () => {
     const data = useContext(DataContext);
-    const posts = data.data.posts;
-    console.log(posts);
+    const result = data.data.posts;
+    const posts = result.reverse();
+
     return (
         <div>
             {posts.map((item) => {
                 return (
-                    <div className="flex gap-3 items-start border-gray-700 border-b pb-5 mt-5">
+                    <div
+                        className="w-full flex gap-3 items-start border-gray-700 border-b pb-5 mt-5"
+                        key={item.id}
+                    >
                         <div className="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]">
                             <img
                                 src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
@@ -24,35 +28,25 @@ const FollowingCard = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="">
+                        <div className="w-full">
                             <div className="flex items-center gap-2">
                                 <span className="flex items-center gap-1">
-                                    <p className="font-bold">{item.name}</p>
+                                    <p className="font-bold">Twitter</p>
                                     <RiVerifiedBadgeFill
                                         size={18}
                                         className="text-[#1D9BF0]"
                                     />
                                 </span>
                                 <div className="flex items-center gap-0">
-                                    <p className="text-gray-400">
-                                        @{item.username}
-                                    </p>
+                                    <p className="text-gray-400">@twitter</p>
                                     <div className="">
                                         <PiDotLight />
                                     </div>
-                                    <p className="text-gray-400">
-                                        {item.published}
-                                    </p>
+                                    <p className="text-gray-400">June 23</p>
                                 </div>
                             </div>
                             <div>
-                                <p className="text-gray-200">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Adipisci eum nostrum
-                                    distinctio et illum deserunt molestiae, est,
-                                    dolore consequatur totam sed sunt iure
-                                    voluptatem numquam fuga! Ratione quo
-                                </p>
+                                <p className="text-gray-200">{item.title}</p>
                                 <div className="rounded-2xl overflow-hidden mt-5 max-w-[538px] max-h-[660px]">
                                     <img src={item.image} />
                                 </div>

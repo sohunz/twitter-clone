@@ -9,8 +9,11 @@ const Trend = () => {
         <ul>
             {trend.map((item) => {
                 return (
-                    <li className="flex justify-between items-start hover:bg-gray-700 py-2 px-4">
-                        <div>
+                    <li
+                        className="flex justify-between items-start hover:bg-gray-700 py-2 px-4"
+                        key={item.id}
+                    >
+                        <div key={item.id}>
                             <p className="text-gray-400 text-[13px]">
                                 {item.category}
                             </p>
