@@ -10,11 +10,11 @@ const Post = () => {
     return (
         <div className="border-gray-700 border-b">
             <div className="flex items-center gap-4 mt-5 ">
-                <div class="rounded-full overflow-hidden w-[45px] h-[45px]">
+                <div className="rounded-full overflow-hidden w-[45px] h-[45px]">
                     <img
                         src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                         alt=""
-                        class="w-full h-full object-cover"
+                        className="w-full h-full object-cover"
                     />
                 </div>
                 <div>

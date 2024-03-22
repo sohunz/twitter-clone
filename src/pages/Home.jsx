@@ -2,8 +2,12 @@ import React from "react";
 import Sidebar from "./sidebar/Sidebar";
 import Trending from "./trending/Trending";
 import Feed from "./feed/Feed";
+import UseFetch from "../hooks/UseFetch";
 
 const Home = () => {
+    const data = UseFetch("http://localhost:8000/trending");
+    console.log(data);
+
     return (
         <div className="max-w-[1280px] mx-auto">
             <div className="flex">

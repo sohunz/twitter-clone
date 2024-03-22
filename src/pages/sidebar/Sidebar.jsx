@@ -69,11 +69,11 @@ const Sidebar = () => {
                 </div>
                 <div className="flex justify-between items-center py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5">
                     <div className="flex gap-3">
-                        <div class="rounded-full overflow-hidden w-[50px] h-[50px]">
+                        <div className="rounded-full overflow-hidden w-[50px] h-[50px]">
                             <img
                                 src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                                 alt=""
-                                class="w-full h-full object-cover"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                         <div>

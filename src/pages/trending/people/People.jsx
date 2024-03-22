@@ -6,11 +6,11 @@ const People = () => {
             <li className="hover:bg-gray-700 py-4 px-3">
                 <div className="flex items-center justify-between">
                     <div className="flex gap-3">
-                        <div class="rounded-full overflow-hidden w-[40px] h-[40px]">
+                        <div className="rounded-full overflow-hidden w-[40px] h-[40px]">
                             <img
                                 src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                                 alt=""
-                                class="w-full h-full object-cover"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                         <div>

@@ -1,0 +1,24 @@
+{
+    "posts": [
+        {
+            "name": "Gracie Abrams",
+            "username": "@GracieAbrams",
+            "title": "Hello, This is the title.",
+            "image": "https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/19472/hero-19472-490933394.jpg?itok=OL8vUk6I",
+            "published": "Mar 22"
+        }
+    ],
+    "trending": [
+        {
+            "category": "Music Trending",
+            "title": "Taylor Swift",
+            "posts": "123K"
+        }
+    ],
+    "peoples": [
+        {
+            "name": "Gracie Abrams",
+            "username": "@GracieAbrams"
+        }
+    ]
+}

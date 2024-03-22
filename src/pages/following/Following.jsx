@@ -11,11 +11,11 @@ const Following = () => {
     return (
         <div className="mt-5 border-gray-700 border-b pb-5">
             <div className="flex gap-3 items-start">
-                <div class="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]">
+                <div className="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]">
                     <img
                         src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                         alt=""
-                        class="w-full h-full object-cover"
+                        className="w-full h-full object-cover"
                     />
                 </div>
                 <div className="">
