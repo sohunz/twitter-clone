@@ -77,8 +77,8 @@ const Sidebar = () => {
                             />
                         </div>
                         <div>
-                            <p>Olivia Rodrigo</p>
-                            <p className="text-gray-500">@love</p>
+                            <p>Twitter</p>
+                            <p className="text-gray-500">@Twitter</p>
                         </div>
                     </div>
                     <div>

@@ -14,13 +14,13 @@ const People = () => {
                             <div className="flex gap-3">
                                 <div className="rounded-full overflow-hidden w-[40px] h-[40px]">
                                     <img
-                                        src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
+                                        src="https://pbs.twimg.com/profile_images/634514155261833216/czgYrPLQ_400x400.jpg"
                                         alt=""
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
                                 <div>
-                                    <p>{item.name}</p>
+                                    <p className="font-bold">{item.name}</p>
                                     <p className="text-gray-400">
                                         @{item.username}
                                     </p>

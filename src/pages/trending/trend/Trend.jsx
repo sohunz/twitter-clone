@@ -19,7 +19,7 @@ const Trend = () => {
                             </p>
                             <p className="font-bold">{item.title}</p>
                             <p className="text-gray-400 text-[13px]">
-                                {item.post} posts
+                                {item.posts} posts
                             </p>
                         </div>
                         <div className="pt-1">

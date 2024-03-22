@@ -1,24 +1,24 @@
 {
-  "posts": [
-    {
-      "id": "36a7",
-      "title": "Real Madrid",
-      "image": ""
-    }
-  ],
-  "trending": [
-    {
-      "id": "1",
-      "category": "Music Trending",
-      "title": "Taylor Swift",
-      "posts": "123K"
-    }
-  ],
-  "peoples": [
-    {
-      "id": "1",
-      "name": "Gracie Abrams",
-      "username": "GracieAbrams"
-    }
-  ]
+    "posts": [
+        {
+            "id": "c730",
+            "title": "Hello, First Tweet!",
+            "image": ""
+        }
+    ],
+    "trending": [
+        {
+            "id": "1",
+            "category": "Football",
+            "title": "Cristiano Ronaldo",
+            "posts": "950K"
+        }
+    ],
+    "peoples": [
+        {
+            "id": "1",
+            "name": "Travis Scott",
+            "username": "TravisScott"
+        }
+    ]
 }
