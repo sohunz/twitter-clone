@@ -7,6 +7,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoIosStats } from "react-icons/io";
 import { FaRegBookmark } from "react-icons/fa6";
 import DataContext from "../contexts/DataContext";
+import { RiMoreLine } from "react-icons/ri";
 
 const FollowingCard = () => {
     const data = useContext(DataContext);
@@ -99,6 +100,7 @@ const FollowingCard = () => {
                                 </div>
                             </div>
                         </div>
+                        <RiMoreLine size={20} />
                     </div>
                 );
             })}
