@@ -12,10 +12,6 @@ const Feed = () => {
             <div className="px-5">
                 <Post />
                 <Outlet />
-                <Outlet />
-                <Outlet />
-                <Outlet />
-                <Outlet />
             </div>
         </div>
     );

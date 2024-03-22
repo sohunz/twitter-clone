@@ -28,10 +28,6 @@ const Trending = () => {
                         Tranding for you
                     </p>
                     <Trend />
-                    <Trend />
-                    <Trend />
-                    <Trend />
-                    <Trend />
                     <p className="text-[#1D9BF0] px-4 mt-4 cursor-pointer">
                         Show more
                     </p>
@@ -40,10 +36,6 @@ const Trending = () => {
                     <p className="text-xl mb-3 font-bold py-2 px-3">
                         Who to follow
                     </p>
-                    <People />
-                    <People />
-                    <People />
-                    <People />
                     <People />
                     <p className="text-[#1D9BF0] px-4 mt-4 cursor-pointer">
                         Show more

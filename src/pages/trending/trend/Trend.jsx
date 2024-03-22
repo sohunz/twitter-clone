@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RiMoreLine } from "react-icons/ri";
+import DataContext from "../../../contexts/DataContext";
 
 const Trend = () => {
+    const data = useContext(DataContext);
+    const trend = data.data.trending;
     return (
         <ul>
-            <li className="flex justify-between items-start hover:bg-gray-700 py-2 px-4">
-                <div>
-                    <p className="text-gray-400 text-[13px]">Music Trending</p>
-                    <p className="font-bold">Travis Scott</p>
-                    <p className="text-gray-400 text-[13px]">100K posts</p>
-                </div>
-                <div className="pt-1">
-                    <RiMoreLine size={18} />
-                </div>
-            </li>
+            {trend.map((item) => {
+                return (
+                    <li className="flex justify-between items-start hover:bg-gray-700 py-2 px-4">
+                        <div>
+                            <p className="text-gray-400 text-[13px]">
+                                {item.category}
+                            </p>
+                            <p className="font-bold">{item.title}</p>
+                            <p className="text-gray-400 text-[13px]">
+                                {item.post} posts
+                            </p>
+                        </div>
+                        <div className="pt-1">
+                            <RiMoreLine size={18} />
+                        </div>
+                    </li>
+                );
+            })}
         </ul>
     );
 };
