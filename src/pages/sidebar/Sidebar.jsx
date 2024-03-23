@@ -10,6 +10,7 @@ import { HiOutlineUsers } from "react-icons/hi2";
 import { HiOutlineUser } from "react-icons/hi";
 import { CiCircleMore } from "react-icons/ci";
 import { RiMoreLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     return (
@@ -22,42 +23,60 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <ul>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <GoHomeFill size={28} />
-                            <p>Home</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <FiSearch size={28} />
-                            <p>Explore</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <RiNotification4Line size={28} />
-                            <p>Notifications</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <MdOutlineEmail size={28} />
-                            <p>Messages</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <RiFileListLine size={28} />
-                            <p>Lists</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <VscBookmark size={28} />
-                            <p>Bookmarks</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <HiOutlineUsers size={28} />
-                            <p>Communities</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <FaXTwitter size={28} />
-                            <p>Premium</p>
-                        </li>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
-                            <HiOutlineUser size={28} />
-                            <p>Profile</p>
-                        </li>
+                        <Link to="/following">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <GoHomeFill size={28} />
+                                <p>Home</p>
+                            </li>
+                        </Link>
+                        <Link to="/explore">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <FiSearch size={28} />
+                                <p>Explore</p>
+                            </li>
+                        </Link>
+                        <Link to="/notification">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <RiNotification4Line size={28} />
+                                <p>Notifications</p>
+                            </li>
+                        </Link>
+                        <Link to="message">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <MdOutlineEmail size={28} />
+                                <p>Messages</p>
+                            </li>
+                        </Link>
+                        <Link to="/list">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <RiFileListLine size={28} />
+                                <p>Lists</p>
+                            </li>
+                        </Link>
+                        <Link to="/bookmark">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <VscBookmark size={28} />
+                                <p>Bookmarks</p>
+                            </li>
+                        </Link>
+                        <Link to="/community">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <HiOutlineUsers size={28} />
+                                <p>Communities</p>
+                            </li>
+                        </Link>
+                        <Link to="/premium">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <FaXTwitter size={28} />
+                                <p>Premium</p>
+                            </li>
+                        </Link>
+                        <Link to="/profile">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                                <HiOutlineUser size={28} />
+                                <p>Profile</p>
+                            </li>
+                        </Link>
                         <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
                             <CiCircleMore size={28} />
                             <p>More</p>
