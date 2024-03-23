@@ -19,7 +19,7 @@ const Explore = () => {
             <div className="sticky z-50 top-0">
                 <ProfileNav />
             </div>
-            <p className="px-5 mt-5 mb-3 font-bold text-xl ">
+            <p className="px-5 mt-5 mb-5 font-bold text-xl ">
                 Peoples you may know
             </p>
             {users.map((item) => {

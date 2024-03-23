@@ -1,93 +1,91 @@
 {
-    "posts": [
-        {
-            "id": "d79c",
-            "title": "Hello",
-            "image": ""
-        }
-    ],
-    "trending": [
-        {
-            "id": "1",
-            "category": "Trending",
-            "title": "Cristiano Ronaldo",
-            "posts": "2M"
-        },
-        {
-            "id": "2",
-            "category": "Music Trending",
-            "title": "#TravisScott",
-            "posts": "520K"
-        },
-        {
-            "id": "3",
-            "category": "Technology",
-            "title": "Mac Book Pro M3",
-            "posts": "950K"
-        },
-        {
-            "id": "4",
-            "category": "Education",
-            "title": "Harvard University",
-            "posts": "327K"
-        },
-        {
-            "id": "5",
-            "category": "Auto Cars",
-            "title": "#NissanGTR",
-            "posts": "327K"
-        }
-    ],
-    "peoples": [
-        {
-            "id": "1",
-            "name": "Travis Scott",
-            "username": "TravisScott",
-            "image": "https://pbs.twimg.com/profile_images/634514155261833216/czgYrPLQ_400x400.jpg"
-        },
-        {
-            "id": "2",
-            "name": "Toni Kroos",
-            "username": "ToniKroos",
-            "image": "https://pbs.twimg.com/profile_images/1144875187508338688/0MtdI4-f_400x400.jpg"
-        },
-        {
-            "id": "3",
-            "name": "Apple",
-            "username": "apple",
-            "image": "https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s900-c-k-c0x00ffffff-no-rj"
-        },
-        {
-            "id": "4",
-            "name": "Manchester United",
-            "username": "manuited",
-            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/800px-Manchester_United_FC_crest.svg.png"
-        },
-
-        {
-            "id": "5",
-            "name": "Taylor Swift",
-            "username": "taylorswift",
-            "image": "https://i.pinimg.com/736x/53/9b/23/539b23ddf2507eafaeb64d1c132ccc8c.jpg"
-        },
-        {
-            "id": "6",
-            "name": "Metro Boomin",
-            "username": "MetroBoomin",
-            "image": "https://i.scdn.co/image/ab6761610000e5ebdf9a1555f53a20087b8c5a5c"
-        },
-
-        {
-            "id": "7",
-            "name": "Chrome",
-            "username": "googlechrome",
-            "image": "https://yt3.googleusercontent.com/7Qy-xiYrM2DHUEVFTBkok5ei6n_qEnH9XRwBECZnsl_E02VxrLDYcU7svibdYL1YYs9sZKe6KA=s900-c-k-c0x00ffffff-no-rj"
-        },
-        {
-            "id": "8",
-            "name": "Telegram Messenger",
-            "username": "telegram",
-            "image": "https://pbs.twimg.com/profile_images/1183117696730390529/LRDASku7_400x400.jpg"
-        }
-    ]
+  "posts": [
+    {
+      "id": "546a",
+      "title": "Hello, First Tweet!",
+      "image": ""
+    }
+  ],
+  "trending": [
+    {
+      "id": "1",
+      "category": "Trending",
+      "title": "Cristiano Ronaldo",
+      "posts": "2M"
+    },
+    {
+      "id": "2",
+      "category": "Music Trending",
+      "title": "#TravisScott",
+      "posts": "520K"
+    },
+    {
+      "id": "3",
+      "category": "Technology",
+      "title": "Mac Book Pro M3",
+      "posts": "950K"
+    },
+    {
+      "id": "4",
+      "category": "Education",
+      "title": "Harvard University",
+      "posts": "327K"
+    },
+    {
+      "id": "5",
+      "category": "Auto Cars",
+      "title": "#NissanGTR",
+      "posts": "327K"
+    }
+  ],
+  "peoples": [
+    {
+      "id": "1",
+      "name": "Travis Scott",
+      "username": "TravisScott",
+      "image": "https://pbs.twimg.com/profile_images/634514155261833216/czgYrPLQ_400x400.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Toni Kroos",
+      "username": "ToniKroos",
+      "image": "https://pbs.twimg.com/profile_images/1144875187508338688/0MtdI4-f_400x400.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Apple",
+      "username": "apple",
+      "image": "https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "4",
+      "name": "Manchester United",
+      "username": "manuited",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/800px-Manchester_United_FC_crest.svg.png"
+    },
+    {
+      "id": "5",
+      "name": "Taylor Swift",
+      "username": "taylorswift",
+      "image": "https://i.pinimg.com/736x/53/9b/23/539b23ddf2507eafaeb64d1c132ccc8c.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Metro Boomin",
+      "username": "MetroBoomin",
+      "image": "https://i.scdn.co/image/ab6761610000e5ebdf9a1555f53a20087b8c5a5c"
+    },
+    {
+      "id": "7",
+      "name": "Chrome",
+      "username": "googlechrome",
+      "image": "https://yt3.googleusercontent.com/7Qy-xiYrM2DHUEVFTBkok5ei6n_qEnH9XRwBECZnsl_E02VxrLDYcU7svibdYL1YYs9sZKe6KA=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "8",
+      "name": "Telegram Messenger",
+      "username": "telegram",
+      "image": "https://pbs.twimg.com/profile_images/1183117696730390529/LRDASku7_400x400.jpg"
+    }
+  ]
 }

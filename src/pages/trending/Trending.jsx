@@ -40,9 +40,11 @@ const Trending = () => {
                     </p>
                     <People />
 
-                    <p className="text-[#1D9BF0] text-md px-5 mt-4 cursor-pointer">
-                        Show more
-                    </p>
+                    <Link to="/profile">
+                        <p className="text-[#1D9BF0] text-md px-5 mt-4 cursor-pointer">
+                            Show more
+                        </p>
+                    </Link>
                 </div>
             </div>
         </div>
