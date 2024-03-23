@@ -15,10 +15,10 @@ const FeedNav = () => {
                 <ul className="w-full h-full flex items-center justify-between">
                     <Link
                         to="/foryou"
-                        className={`w-full text-center py-4 hover:bg-gray-700 cursor-pointer ${
+                        className={`w-full font-bold text-center py-4 hover:bg-gray-700 cursor-pointer ${
                             activeTab === "For You"
-                                ? "border-b-2 border-blue-500 outline-4"
-                                : ""
+                                ? "border-b-2 border-blue-500 outline-4 text-white"
+                                : "text-gray-500"
                         }`}
                         onClick={() => handleTabClick("For You")}
                     >
@@ -26,10 +26,10 @@ const FeedNav = () => {
                     </Link>
                     <Link
                         to="/following"
-                        className={`w-full text-center py-4 hover:bg-gray-700 cursor-pointer  ${
+                        className={`w-full font-bold text-center py-4 hover:bg-gray-700 cursor-pointer  ${
                             activeTab === "Following"
-                                ? "border-b-2 border-blue-500"
-                                : ""
+                                ? "border-b-2 border-blue-500 text-white"
+                                : "text-gray-500"
                         }`}
                         onClick={() => handleTabClick("Following")}
                     >

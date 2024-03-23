@@ -6,18 +6,20 @@ const Trend = () => {
     const data = useContext(DataContext);
     const trend = data.data.trending;
     return (
-        <ul>
+        <ul className="">
             {trend.map((item) => {
                 return (
                     <li
-                        className="flex justify-between items-start hover:bg-gray-700 py-2 px-5"
+                        className="flex justify-between items-start hover:bg-[#2a323d] py-2 px-5 cursor-pointer duration-200"
                         key={item.id}
                     >
                         <div key={item.id}>
                             <p className="text-gray-400 text-[13px]">
                                 {item.category}
                             </p>
-                            <p className="font-bold">{item.title}</p>
+                            <p className="font-bold text-gray-200">
+                                {item.title}
+                            </p>
                             <p className="text-gray-400 text-[13px]">
                                 {item.posts} posts
                             </p>

@@ -57,7 +57,7 @@ const FollowingCard = () => {
                     >
                         <div className="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]">
                             <img
-                                src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1711065600&semt=ais"
+                                src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -66,7 +66,7 @@ const FollowingCard = () => {
                             <div className="flex items-center gap-2">
                                 <span className="flex items-center gap-1">
                                     <p className="font-bold text-[17px]">
-                                        Twitter
+                                        Olivia Rodrigo
                                     </p>
                                     <RiVerifiedBadgeFill
                                         size={18}
@@ -74,7 +74,7 @@ const FollowingCard = () => {
                                     />
                                 </span>
                                 <div className="flex items-center gap-0">
-                                    <p className="text-gray-400">@Twitter</p>
+                                    <p className="text-gray-400">@sohun</p>
                                     <div className="">
                                         <PiDotLight />
                                     </div>

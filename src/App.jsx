@@ -22,7 +22,7 @@ const App = () => {
         <DataProvider>
             <ToggleProvider>
                 <div className="max-w-[1280px] mx-auto flex">
-                    <div className="max-w-[260px] flex-1">
+                    <div className="max-w-[280px] flex-1">
                         <div className="sticky top-0">
                             <Sidebar />
                         </div>

@@ -14,11 +14,11 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     return (
-        <div className=" min-w-[260px] max-w-[260px] min-h-screen border-gray-700 border-r ">
+        <div className=" min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r ">
             <div className="w-full h-screen flex flex-col gap-3 justify-between px-2">
-                <div>
+                <div className="mb-2">
                     <div className=" px-1 pt-1">
-                        <div className="inline-block rounded-full p-3 hover:bg-gray-800 cursor-pointer ">
+                        <div className="inline-block rounded-full px-3 py-[5px] hover:bg-gray-800 cursor-pointer ">
                             <FaXTwitter size={30} />
                         </div>
                     </div>
@@ -86,18 +86,20 @@ const Sidebar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="flex justify-between items-center py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5">
-                    <div className="flex gap-2">
-                        <div className="rounded-full overflow-hidden w-[50px] h-[50px]">
+                <div className="flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5">
+                    <div className="flex gap-3">
+                        <div className="rounded-full overflow-hidden w-[45px] h-[45px]">
                             <img
-                                src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1711065600&semt=ais"
+                                src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
                         </div>
                         <div>
-                            <p className="font-bold text-[16px]">Twitter</p>
-                            <p className="text-gray-400">@Twitter</p>
+                            <p className="font-bold text-[16px]">
+                                Olivia Rodrigo
+                            </p>
+                            <p className="text-gray-400 text-sm">@sohun</p>
                         </div>
                     </div>
                     <div>

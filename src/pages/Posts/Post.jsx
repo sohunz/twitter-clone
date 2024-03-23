@@ -53,7 +53,7 @@ const Post = () => {
             <div className="flex items-center gap-4 mt-5 ">
                 <div className="rounded-full overflow-hidden w-[45px] h-[45px]">
                     <img
-                        src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1711065600&semt=ais"
+                        src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                         alt=""
                         className="w-full h-full object-cover"
                     />
