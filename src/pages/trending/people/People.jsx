@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import DataContext from "../../../contexts/DataContext";
+import { RiVerifiedBadgeFill } from "react-icons/ri";
 
 const People = () => {
     const data = useContext(DataContext);
     const peoples = data.data.peoples;
 
+    const peoplesFiltered = peoples.slice(0, 3);
+
     return (
         <ul>
-            {peoples.map((item) => {
+            {peoplesFiltered.map((item) => {
                 return (
                     <li
                         className="hover:bg-[#2a323d] duration-200 cursor-pointer py-4 px-5"
@@ -22,7 +25,13 @@ const People = () => {
                                     />
                                 </div>
                                 <div>
-                                    <p className="font-bold">{item.name}</p>
+                                    <span className="flex items-center gap-1">
+                                        <p className="font-bold">{item.name}</p>
+                                        <RiVerifiedBadgeFill
+                                            size={16}
+                                            className="text-[#1D9BF0]"
+                                        />
+                                    </span>
                                     <p className="text-gray-400">
                                         @{item.username}
                                     </p>
