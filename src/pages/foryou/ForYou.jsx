@@ -3,7 +3,7 @@ import React from "react";
 const ForYou = () => {
     return (
         <div>
-            <p>ForYou Page</p>
+            <p className="text-xl font-bold mt-60 text-center">ForYou Page</p>
         </div>
     );
 };

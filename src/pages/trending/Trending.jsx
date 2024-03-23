@@ -1,8 +1,8 @@
 import React from "react";
 import TrendingNav from "./TrendingNav";
-import { RiMoreLine } from "react-icons/ri";
 import Trend from "./trend/Trend";
 import People from "./people/People";
+import { Link } from "react-router-dom";
 
 const Trending = () => {
     return (
@@ -28,15 +28,18 @@ const Trending = () => {
                         Tranding for you
                     </p>
                     <Trend />
-                    <p className="text-[#1D9BF0] text-md px-4 mt-4 cursor-pointer">
-                        Show more
-                    </p>
+                    <Link to="/explore">
+                        <p className="text-[#1D9BF0] text-md px-5 mt-4 cursor-pointer">
+                            Show more
+                        </p>
+                    </Link>
                 </div>
                 <div className="bg-[#1E2732] rounded-2xl py-5 mt-3 overflow-hidden">
                     <p className="text-xl mb-3 font-bold py-2 px-5">
                         Who to follow
                     </p>
                     <People />
+
                     <p className="text-[#1D9BF0] text-md px-5 mt-4 cursor-pointer">
                         Show more
                     </p>
