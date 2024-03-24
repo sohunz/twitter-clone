@@ -1,5 +1,6 @@
 import React from "react";
 import ListNav from "./ListNav";
+import { IoAdd } from "react-icons/io5";
 
 const Explore = () => {
     return (
@@ -8,10 +9,44 @@ const Explore = () => {
                 <ListNav />
             </div>
             <div>
-                <p className="px-5 mt-5 mb-3 font-bold text-xl ">
+                <p className="px-5 mt-5 mb-10 font-bold text-xl ">
                     Discover new Lists
                 </p>
-                <p className="px-5 mt-5 mb-3 font-bold text-xl ">Your Lists</p>
+                <div className="px-5 flex justify-between items-center hover:bg-[#1E2732] py-4">
+                    <div className="flex gap-5">
+                        <div className="rounded-xl overflow-hidden w-[70px] h-[70px]">
+                            <img
+                                src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col justify-between">
+                            <div className="flex flex-col">
+                                <div>
+                                    <p className="font-bold">Olivia Rodrigo</p>
+                                    <p className="text-[13px] text-gray-400">
+                                        40K Members
+                                    </p>
+                                </div>
+                                <div className="flex text-[13px] gap-2 mt-2">
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #song
+                                    </p>
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #music
+                                    </p>
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #oliviarodrido
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="border p-2 bg-white rounded-full cursor-pointer">
+                        <IoAdd color="black" size={20} />
+                    </div>
+                </div>
             </div>
         </div>
     );
