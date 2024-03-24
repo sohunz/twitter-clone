@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MyProfileNav from "./MyProfileNav";
 import { PiCalendarDuotone } from "react-icons/pi";
+import { Link, Outlet } from "react-router-dom";
 
 const MyProfile = () => {
     const [activeTab, setActiveTab] = useState("Posts");
@@ -55,7 +56,8 @@ const MyProfile = () => {
                 <div className="mt-7 px-5">
                     <header className="w-full">
                         <nav className="w-full flex justify-evenly">
-                            <div
+                            <Link
+                                to="posts"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Posts"
                                         ? "border-b-2 border-blue-500 font-bold"
@@ -64,8 +66,9 @@ const MyProfile = () => {
                                 onClick={() => handleTabClick("Posts")}
                             >
                                 Posts
-                            </div>
-                            <div
+                            </Link>
+                            <Link
+                                to="replies"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Replies"
                                         ? "border-b-2 border-blue-500 font-bold"
@@ -74,8 +77,9 @@ const MyProfile = () => {
                                 onClick={() => handleTabClick("Replies")}
                             >
                                 Replies
-                            </div>
-                            <div
+                            </Link>
+                            <Link
+                                to="highlights"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Highlights"
                                         ? "border-b-2 border-blue-500 font-bold"
@@ -84,8 +88,9 @@ const MyProfile = () => {
                                 onClick={() => handleTabClick("Highlights")}
                             >
                                 Highlights
-                            </div>
-                            <div
+                            </Link>
+                            <Link
+                                to="articles"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Articls"
                                         ? "border-b-2 border-blue-500 font-bold"
@@ -93,9 +98,10 @@ const MyProfile = () => {
                                 }`}
                                 onClick={() => handleTabClick("Articls")}
                             >
-                                Articls
-                            </div>
-                            <div
+                                Articles
+                            </Link>
+                            <Link
+                                to="media"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Media"
                                         ? "border-b-2 border-blue-500 font-bold"
@@ -104,8 +110,9 @@ const MyProfile = () => {
                                 onClick={() => handleTabClick("Media")}
                             >
                                 Media
-                            </div>
-                            <div
+                            </Link>
+                            <Link
+                                to="likes"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Likes"
                                         ? "border-b-2 border-blue-500 font-bold"
@@ -114,10 +121,13 @@ const MyProfile = () => {
                                 onClick={() => handleTabClick("Likes")}
                             >
                                 Likes
-                            </div>
+                            </Link>
                         </nav>
                     </header>
                 </div>
+            </div>
+            <div className="px-5 mt-5">
+                <Outlet />
             </div>
         </div>
     );

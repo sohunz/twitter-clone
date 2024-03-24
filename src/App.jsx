@@ -20,6 +20,12 @@ import All from "./pages/sidebar/notification/All";
 import Verified from "./pages/sidebar/notification/Verified";
 import Mention from "./pages/sidebar/notification/Mention";
 import MyProfile from "./pages/profile/MyProfile";
+import Post from "./pages/profile/profile_pages/Posts";
+import Articles from "./pages/profile/profile_pages/Articles";
+import Highlights from "./pages/profile/profile_pages/Highlights";
+import Likes from "./pages/profile/profile_pages/Likes";
+import Media from "./pages/profile/profile_pages/Media";
+import Replies from "./pages/profile/profile_pages/Replies";
 
 const App = () => {
     return (
@@ -69,7 +75,23 @@ const App = () => {
                                 />
                                 <Route path="premium" element={<Premium />} />
                                 <Route path="profile" element={<Profile />} />
-                                <Route path="user" element={<MyProfile />} />
+                                <Route path="user" element={<MyProfile />}>
+                                    <Route path="posts" element={<Post />} />
+                                    <Route
+                                        path="replies"
+                                        element={<Replies />}
+                                    />
+                                    <Route
+                                        path="highlights"
+                                        element={<Highlights />}
+                                    />
+                                    <Route
+                                        path="articles"
+                                        element={<Articles />}
+                                    />
+                                    <Route path="media" element={<Media />} />
+                                    <Route path="likes" element={<Likes />} />
+                                </Route>
                             </Routes>
                             <Trending />
                         </div>
