@@ -19,6 +19,7 @@ import Profile from "./pages/sidebar/profile/Profile";
 import All from "./pages/sidebar/notification/All";
 import Verified from "./pages/sidebar/notification/Verified";
 import Mention from "./pages/sidebar/notification/Mention";
+import MyProfile from "./pages/profile/MyProfile";
 
 const App = () => {
     return (
@@ -68,6 +69,7 @@ const App = () => {
                                 />
                                 <Route path="premium" element={<Premium />} />
                                 <Route path="profile" element={<Profile />} />
+                                <Route path="user" element={<MyProfile />} />
                             </Routes>
                             <Trending />
                         </div>

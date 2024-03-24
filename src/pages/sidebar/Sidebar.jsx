@@ -86,7 +86,10 @@ const Sidebar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5">
+                <Link
+                    to="/user"
+                    className="flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5"
+                >
                     <div className="flex gap-3">
                         <div className="rounded-full overflow-hidden w-[45px] h-[45px]">
                             <img
@@ -105,7 +108,7 @@ const Sidebar = () => {
                     <div>
                         <RiMoreLine size={20} />
                     </div>
-                </div>
+                </Link>
             </div>
         </div>
     );
