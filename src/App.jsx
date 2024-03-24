@@ -16,6 +16,9 @@ import Bookmark from "./pages/sidebar/bookmark/Bookmark";
 import Community from "./pages/sidebar/community/Community";
 import Premium from "./pages/sidebar/premium/Premium";
 import Profile from "./pages/sidebar/profile/Profile";
+import All from "./pages/sidebar/notification/All";
+import Verified from "./pages/sidebar/notification/Verified";
+import Mention from "./pages/sidebar/notification/Mention";
 
 const App = () => {
     return (
@@ -45,7 +48,17 @@ const App = () => {
                                 <Route
                                     path="notification"
                                     element={<Notification />}
-                                />
+                                >
+                                    <Route path="all" element={<All />} />
+                                    <Route
+                                        path="verified"
+                                        element={<Verified />}
+                                    />
+                                    <Route
+                                        path="mention"
+                                        element={<Mention />}
+                                    />
+                                </Route>
                                 <Route path="message" element={<Message />} />
                                 <Route path="list" element={<List />} />
                                 <Route path="bookmark" element={<Bookmark />} />
