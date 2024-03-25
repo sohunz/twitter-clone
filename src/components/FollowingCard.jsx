@@ -171,12 +171,12 @@ const FollowingCard = () => {
                                         <div className="flex items-center gap-2">
                                             <FaHeart
                                                 size={16}
-                                                className="text-red-500 cursor-pointer"
+                                                className="text-[#F91880] cursor-pointer"
                                                 onClick={() =>
                                                     toggleLike(item.id)
                                                 }
                                             />
-                                            <p className="text-[14px] text-gray-400">
+                                            <p className="text-[14px] text-[#F91880]">
                                                 9K
                                             </p>
                                         </div>
