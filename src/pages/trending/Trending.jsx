@@ -5,6 +5,9 @@ import People from "./people/People";
 import { Link } from "react-router-dom";
 
 const Trending = () => {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <div className="max-w-[350px] min-w-[350px] mb-5">
             <div className="a sticky z-50 top-0">
@@ -22,6 +25,7 @@ const Trending = () => {
                     <Link
                         to="/premium"
                         className="bg-[#1D9BF0] px-5 py-[7px] rounded-full font-bold"
+                        onClick={scrollToTop}
                     >
                         Subscribe
                     </Link>
@@ -31,7 +35,7 @@ const Trending = () => {
                         Tranding for you
                     </p>
                     <Trend />
-                    <Link to="/explore">
+                    <Link to="/explore" onClick={scrollToTop}>
                         <p className="text-[#1D9BF0] text-md px-5 mt-4 cursor-pointer">
                             Show more
                         </p>
@@ -43,7 +47,7 @@ const Trending = () => {
                     </p>
                     <People />
 
-                    <Link to="/profile">
+                    <Link to="/profile" onClick={scrollToTop}>
                         <p className="text-[#1D9BF0] text-md px-5 mt-4 cursor-pointer">
                             Show more
                         </p>

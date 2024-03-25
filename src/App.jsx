@@ -41,6 +41,7 @@ const App = () => {
                         <div className="flex gap-8">
                             <Routes>
                                 <Route path="/" element={<Feed />}>
+                                    <Route index element={<Following />} />
                                     <Route
                                         path="following"
                                         element={<Following />}
@@ -56,6 +57,7 @@ const App = () => {
                                     path="notification"
                                     element={<Notification />}
                                 >
+                                    <Route index element={<All />} />
                                     <Route path="all" element={<All />} />
                                     <Route
                                         path="verified"
@@ -76,6 +78,7 @@ const App = () => {
                                 <Route path="premium" element={<Premium />} />
                                 <Route path="profile" element={<Profile />} />
                                 <Route path="user" element={<MyProfile />}>
+                                    <Route index element={<Post />} />
                                     <Route path="posts" element={<Post />} />
                                     <Route
                                         path="replies"

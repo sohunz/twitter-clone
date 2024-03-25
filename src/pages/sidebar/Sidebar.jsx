@@ -36,29 +36,35 @@ const Sidebar = () => {
         fetchPost();
     }, [data]);
 
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <div className=" min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r ">
             <div className="w-full h-screen flex flex-col gap-3 justify-between px-2">
                 <div className="mb-2">
                     <div className=" px-1 pt-1">
-                        <div className="inline-block rounded-full px-3 py-[5px] hover:bg-gray-800 cursor-pointer ">
+                        <Link
+                            to="/following"
+                            className="inline-block rounded-full px-3 py-[5px] cursor-pointer  "
+                        >
                             <FaXTwitter size={30} />
-                        </div>
+                        </Link>
                     </div>
                     <ul>
-                        <Link to="/following">
+                        <Link to="/following" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold  ">
                                 <GoHomeFill size={28} />
                                 <p>Home</p>
                             </li>
                         </Link>
-                        <Link to="/explore">
+                        <Link to="/explore" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold  ">
                                 <FiSearch size={28} />
                                 <p>Explore</p>
                             </li>
                         </Link>
-                        <Link to="/notification">
+                        <Link to="/notification" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold relative ">
                                 <RiNotification4Line size={28} />
                                 <p>Notifications</p>
@@ -71,37 +77,37 @@ const Sidebar = () => {
                                 )}
                             </li>
                         </Link>
-                        <Link to="message">
+                        <Link to="message" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <MdOutlineEmail size={28} />
                                 <p>Messages</p>
                             </li>
                         </Link>
-                        <Link to="/list">
+                        <Link to="/list" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <RiFileListLine size={28} />
                                 <p>Lists</p>
                             </li>
                         </Link>
-                        <Link to="/bookmark">
+                        <Link to="/bookmark" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <VscBookmark size={28} />
                                 <p>Bookmarks</p>
                             </li>
                         </Link>
-                        <Link to="/community">
+                        <Link to="/community" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <HiOutlineUsers size={28} />
                                 <p>Communities</p>
                             </li>
                         </Link>
-                        <Link to="/premium">
+                        <Link to="/premium" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <FaXTwitter size={28} />
                                 <p>Premium</p>
                             </li>
                         </Link>
-                        <Link to="/profile">
+                        <Link to="/profile" onClick={scrollToTop}>
                             <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <HiOutlineUser size={28} />
                                 <p>Profile</p>
@@ -119,6 +125,7 @@ const Sidebar = () => {
                 <Link
                     to="/user"
                     className="flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5"
+                    onClick={scrollToTop}
                 >
                     <div className="flex gap-3">
                         <div className="rounded-full overflow-hidden w-[45px] h-[45px]">
