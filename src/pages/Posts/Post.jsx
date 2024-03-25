@@ -109,12 +109,17 @@ const Post = () => {
                     </div>
                 </div>
                 <div>
-                    <p
-                        className=" bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer font-semibold"
+                    <button
+                        className={
+                            getInput.title !== ""
+                                ? " bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer font-semibold"
+                                : "bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer font-semibold opacity-50"
+                        }
                         onClick={submit}
+                        disabled={getInput.title === ""}
                     >
                         Post
-                    </p>
+                    </button>
                 </div>
             </div>
         </div>

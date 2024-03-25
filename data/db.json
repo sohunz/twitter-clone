@@ -1,11 +1,5 @@
 {
-  "posts": [
-    {
-      "id": "546a",
-      "title": "Hello, First Tweet!",
-      "image": ""
-    }
-  ],
+  "posts": [],
   "trending": [
     {
       "id": "1",

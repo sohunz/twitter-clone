@@ -15,13 +15,16 @@ const Trending = () => {
                     <p className="text-xl font-bold mb-1">
                         Subscribe to Premium
                     </p>
-                    <p className="mb-2">
+                    <p className="mb-5">
                         Subscribe to unlock new features and if eligible,
                         receive a share of ads revenue.
                     </p>
-                    <button className="bg-[#1D9BF0] px-5 py-[6px] rounded-full font-bold">
+                    <Link
+                        to="/premium"
+                        className="bg-[#1D9BF0] px-5 py-[7px] rounded-full font-bold"
+                    >
                         Subscribe
-                    </button>
+                    </Link>
                 </div>
                 <div className="bg-[#1E2732] rounded-2xl py-5 mt-5 overflow-hidden">
                     <p className="text-xl mb-3 px-5 font-bold p-2">
