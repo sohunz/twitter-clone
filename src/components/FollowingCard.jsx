@@ -10,11 +10,42 @@ import DataContext from "../contexts/DataContext";
 import { RiMoreLine } from "react-icons/ri";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
 
 const FollowingCard = () => {
     const data = useContext(DataContext);
     const [posts, setPosts] = useState([]);
     const [modalToggles, setModalToggles] = useState([]);
+    const [likedPosts, setLikedPosts] = useState({});
+
+    const toggleLike = async (postId) => {
+        try {
+            // Toggle liked status locally
+            const updatedLikedPosts = { ...likedPosts };
+            updatedLikedPosts[postId] = !updatedLikedPosts[postId];
+            setLikedPosts(updatedLikedPosts);
+
+            // Update liked status in JSON server
+            await axios.patch(`http://localhost:8000/posts/${postId}`, {
+                isLiked: updatedLikedPosts[postId],
+            });
+
+            // Save updated likedPosts to localStorage
+            localStorage.setItem(
+                "likedPosts",
+                JSON.stringify(updatedLikedPosts)
+            );
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
+    useEffect(() => {
+        const storedLikedPosts = JSON.parse(localStorage.getItem("likedPosts"));
+        if (storedLikedPosts) {
+            setLikedPosts(storedLikedPosts);
+        }
+    }, []);
 
     const fetchPost = async () => {
         try {
@@ -111,7 +142,7 @@ const FollowingCard = () => {
                                             123
                                         </p>
                                     </div>
-                                    <div className="flex items-center gap-2">
+                                    {/* <div className="flex items-center gap-2">
                                         <FaRegHeart
                                             size={16}
                                             className="text-gray-400"
@@ -119,7 +150,34 @@ const FollowingCard = () => {
                                         <p className="text-[14px] text-gray-400">
                                             9K
                                         </p>
-                                    </div>
+                                    </div> */}
+                                    {likedPosts[item.id] ? (
+                                        <div className="flex items-center gap-2">
+                                            <FaHeart
+                                                size={16}
+                                                className="text-red-500 cursor-pointer"
+                                                onClick={() =>
+                                                    toggleLike(item.id)
+                                                }
+                                            />
+                                            <p className="text-[14px] text-gray-400">
+                                                9K
+                                            </p>
+                                        </div>
+                                    ) : (
+                                        <div className="flex items-center gap-2">
+                                            <FaRegHeart
+                                                size={16}
+                                                className="text-gray-400 cursor-pointer"
+                                                onClick={() =>
+                                                    toggleLike(item.id)
+                                                }
+                                            />
+                                            <p className="text-[14px] text-gray-400">
+                                                9K
+                                            </p>
+                                        </div>
+                                    )}
                                     <div className="flex items-center gap-2">
                                         <IoIosStats
                                             size={17}

@@ -1,5 +1,22 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "no hello",
+      "id": "3d73",
+      "isLiked": true
+    },
+    {
+      "id": "bb7c",
+      "title": "first post",
+      "image": ""
+    },
+    {
+      "id": "b221",
+      "title": "second post",
+      "image": "",
+      "isLiked": true
+    }
+  ],
   "trending": [
     {
       "id": "1",
