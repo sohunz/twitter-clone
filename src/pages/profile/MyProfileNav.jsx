@@ -12,7 +12,6 @@ const MyProfileNav = () => {
         try {
             const response = await axios.get("http://localhost:8000/posts");
             setPosts(response.data);
-            console.log(posts);
         } catch (err) {
             console.log(err.message);
         }

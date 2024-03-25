@@ -1,20 +1,5 @@
 {
-  "posts": [
-    {
-      "id": "cb7c",
-      "title": "Hi",
-      "image": "",
-      "count": 0,
-      "isLiked": false
-    },
-    {
-      "id": "7b0e",
-      "title": "see you",
-      "image": "",
-      "count": 0,
-      "isLiked": false
-    }
-  ],
+  "posts": [],
   "trending": [
     {
       "id": "1",

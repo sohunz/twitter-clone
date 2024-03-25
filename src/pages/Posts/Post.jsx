@@ -117,7 +117,7 @@ const Post = () => {
                         className={
                             getInput.title !== ""
                                 ? " bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer font-semibold"
-                                : "bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer font-semibold opacity-50"
+                                : "bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-default font-semibold opacity-50"
                         }
                         onClick={submit}
                         disabled={getInput.title === ""}
