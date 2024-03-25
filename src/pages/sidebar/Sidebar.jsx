@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
 import { FiSearch } from "react-icons/fi";
@@ -11,8 +11,31 @@ import { HiOutlineUser } from "react-icons/hi";
 import { CiCircleMore } from "react-icons/ci";
 import { RiMoreLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import DataContext from "../../contexts/DataContext";
 
 const Sidebar = () => {
+    const data = useContext(DataContext);
+    const [notificationCount, setNotificationCount] = useState(0);
+
+    const fetchPost = async () => {
+        try {
+            const response = await axios.get("http://localhost:8000/posts");
+            setNotificationCount(
+                response.data.reduce(
+                    (count, post) => count + (post.count || 0),
+                    0
+                )
+            );
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
+    useEffect(() => {
+        fetchPost();
+    }, [data]);
+
     return (
         <div className=" min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r ">
             <div className="w-full h-screen flex flex-col gap-3 justify-between px-2">
@@ -36,9 +59,16 @@ const Sidebar = () => {
                             </li>
                         </Link>
                         <Link to="/notification">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold relative ">
                                 <RiNotification4Line size={28} />
                                 <p>Notifications</p>
+                                {notificationCount > 0 && (
+                                    <div className="absolute bg-red-600 w-[20px] h-[20px] rounded-full flex justify-center items-center top-2 left-7">
+                                        <p className="text-[12px] font-normal">
+                                            {notificationCount}
+                                        </p>
+                                    </div>
+                                )}
                             </li>
                         </Link>
                         <Link to="message">

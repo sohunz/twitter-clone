@@ -17,6 +17,7 @@ const FollowingCard = () => {
     const [posts, setPosts] = useState([]);
     const [modalToggles, setModalToggles] = useState([]);
     const [likedPosts, setLikedPosts] = useState({});
+    const [likeCounts, setLikeCounts] = useState({});
 
     const toggleLike = async (postId) => {
         try {
@@ -25,15 +26,27 @@ const FollowingCard = () => {
             updatedLikedPosts[postId] = !updatedLikedPosts[postId];
             setLikedPosts(updatedLikedPosts);
 
-            // Update liked status in JSON server
+            // Update like count locally
+            const updatedLikeCounts = { ...likeCounts };
+            updatedLikeCounts[postId] = updatedLikedPosts[postId]
+                ? (likeCounts[postId] || 0) + 1
+                : (likeCounts[postId] || 0) - 1;
+            setLikeCounts(updatedLikeCounts);
+
+            // Update liked status and count in JSON server
             await axios.patch(`http://localhost:8000/posts/${postId}`, {
                 isLiked: updatedLikedPosts[postId],
+                count: updatedLikeCounts[postId],
             });
 
-            // Save updated likedPosts to localStorage
+            // Save updated likedPosts and likeCounts to localStorage
             localStorage.setItem(
                 "likedPosts",
                 JSON.stringify(updatedLikedPosts)
+            );
+            localStorage.setItem(
+                "likeCounts",
+                JSON.stringify(updatedLikeCounts)
             );
         } catch (err) {
             console.log(err.message);
@@ -42,8 +55,12 @@ const FollowingCard = () => {
 
     useEffect(() => {
         const storedLikedPosts = JSON.parse(localStorage.getItem("likedPosts"));
+        const storedLikeCounts = JSON.parse(localStorage.getItem("likeCounts"));
         if (storedLikedPosts) {
             setLikedPosts(storedLikedPosts);
+        }
+        if (storedLikeCounts) {
+            setLikeCounts(storedLikeCounts);
         }
     }, []);
 
@@ -59,7 +76,6 @@ const FollowingCard = () => {
 
     useEffect(() => {
         fetchPost();
-        console.log("hello");
     }, [data]);
 
     const toggleModal = (index) => {

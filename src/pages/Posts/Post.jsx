@@ -9,7 +9,11 @@ import axios from "axios";
 import Resizer from "react-image-file-resizer";
 
 const Post = () => {
-    const [getInput, setGetInput] = useState({ title: "", image: "" });
+    const [getInput, setGetInput] = useState({
+        title: "",
+        image: "",
+        count: 0,
+    });
 
     const handleChange = async (e) => {
         if (e.target.type === "file") {
