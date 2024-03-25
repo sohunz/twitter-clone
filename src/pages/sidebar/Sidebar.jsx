@@ -24,64 +24,64 @@ const Sidebar = () => {
                     </div>
                     <ul>
                         <Link to="/following">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold  ">
                                 <GoHomeFill size={28} />
                                 <p>Home</p>
                             </li>
                         </Link>
                         <Link to="/explore">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold  ">
                                 <FiSearch size={28} />
                                 <p>Explore</p>
                             </li>
                         </Link>
                         <Link to="/notification">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <RiNotification4Line size={28} />
                                 <p>Notifications</p>
                             </li>
                         </Link>
                         <Link to="message">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <MdOutlineEmail size={28} />
                                 <p>Messages</p>
                             </li>
                         </Link>
                         <Link to="/list">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <RiFileListLine size={28} />
                                 <p>Lists</p>
                             </li>
                         </Link>
                         <Link to="/bookmark">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <VscBookmark size={28} />
                                 <p>Bookmarks</p>
                             </li>
                         </Link>
                         <Link to="/community">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <HiOutlineUsers size={28} />
                                 <p>Communities</p>
                             </li>
                         </Link>
                         <Link to="/premium">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <FaXTwitter size={28} />
                                 <p>Premium</p>
                             </li>
                         </Link>
                         <Link to="/profile">
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                                 <HiOutlineUser size={28} />
                                 <p>Profile</p>
                             </li>
                         </Link>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  ">
+                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
                             <CiCircleMore size={28} />
                             <p>More</p>
                         </li>
-                        <li className=" flex items-center justify-center gap-4 text-lg p-3 rounded-full cursor-pointer bg-[#1D9BF0] mt-2 ">
+                        <li className=" flex items-center justify-center gap-4 text-lg p-3 rounded-full cursor-pointer bg-[#1D9BF0] mt-2 font-semibold">
                             <p>Post</p>
                         </li>
                     </ul>

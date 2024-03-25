@@ -17,7 +17,7 @@ const Trend = () => {
                             <p className="text-gray-400 text-[13px]">
                                 {item.category}
                             </p>
-                            <p className="font-bold text-gray-200">
+                            <p className="font-semibold text-gray-200">
                                 {item.title}
                             </p>
                             <p className="text-gray-400 text-[13px]">

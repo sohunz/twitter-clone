@@ -55,17 +55,23 @@ const FollowingCard = () => {
                         className="w-full flex gap-3 items-start border-gray-700 border-b pb-5 mt-5"
                         key={item.id}
                     >
-                        <div className="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]">
+                        <Link
+                            to="/user"
+                            className="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]"
+                        >
                             <img
                                 src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
-                        </div>
+                        </Link>
                         <div className="w-full">
-                            <div className="flex items-center gap-2">
+                            <Link
+                                to="/user"
+                                className="inline-flex items-center gap-2"
+                            >
                                 <span className="flex items-center gap-1">
-                                    <p className="font-bold text-[17px]">
+                                    <p className="font-semibold text-[17px]">
                                         Olivia Rodrigo
                                     </p>
                                     <RiVerifiedBadgeFill
@@ -80,7 +86,7 @@ const FollowingCard = () => {
                                     </div>
                                     <p className="text-gray-400">1m</p>
                                 </div>
-                            </div>
+                            </Link>
                             <div>
                                 <p className="text-gray-200">{item.title}</p>
                                 <div className="rounded-2xl overflow-hidden mt-5 max-w-[538px] max-h-[660px]">

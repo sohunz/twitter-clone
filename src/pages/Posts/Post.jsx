@@ -69,30 +69,48 @@ const Post = () => {
                 </div>
             </div>
             <div className="flex items-center justify-between py-5">
-                <div className="flex items-center gap-5">
-                    <label
-                        htmlFor="fileInput"
-                        className="flex items-center space-x-2 cursor-pointer"
-                    >
-                        <IoImageOutline size={19} className="text-[#1D9BF0]" />
-                        <input
-                            id="fileInput"
-                            type="file"
-                            onChange={handleChange}
-                            accept="image/*"
-                            className="hidden"
-                        />
-                    </label>
+                <div className="flex items-center gap-1">
+                    <div className="rounded-full p-2 hover:bg-gray-800 cursor-pointer">
+                        <label
+                            htmlFor="fileInput"
+                            className="flex items-center space-x-2 cursor-pointer"
+                        >
+                            <IoImageOutline
+                                size={19}
+                                className="text-[#1D9BF0]"
+                            />
+                            <input
+                                id="fileInput"
+                                type="file"
+                                onChange={handleChange}
+                                accept="image/*"
+                                className="hidden"
+                            />
+                        </label>
+                    </div>
 
-                    <RiVideoLine size={20} className="text-[#1D9BF0]" />
-                    <TfiLayoutListThumb size={19} className="text-[#1D9BF0]" />
-                    <FaRegFaceSmile size={19} className="text-[#1D9BF0]" />
-                    <BsCalendarDate className="text-[#1D9BF0]" />
-                    <GrLocation size={19} className="text-[#1D9BF0]" />
+                    <div className="rounded-full p-2 hover:bg-gray-800 cursor-pointer">
+                        <RiVideoLine size={20} className="text-[#1D9BF0]" />
+                    </div>
+                    <div className="rounded-full p-2 hover:bg-gray-800 cursor-pointer">
+                        <TfiLayoutListThumb
+                            size={19}
+                            className="text-[#1D9BF0]"
+                        />
+                    </div>
+                    <div className="rounded-full p-2 hover:bg-gray-800 cursor-pointer">
+                        <FaRegFaceSmile size={19} className="text-[#1D9BF0]" />
+                    </div>
+                    <div className="rounded-full p-2 hover:bg-gray-800 cursor-pointer">
+                        <BsCalendarDate className="text-[#1D9BF0]" />
+                    </div>
+                    <div className="rounded-full p-2 hover:bg-gray-800 cursor-pointer">
+                        <GrLocation size={19} className="text-[#1D9BF0]" />
+                    </div>
                 </div>
                 <div>
                     <p
-                        className=" bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer"
+                        className=" bg-[#1D9BF0] px-5 py-[6px] rounded-full cursor-pointer font-semibold"
                         onClick={submit}
                     >
                         Post

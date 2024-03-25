@@ -50,7 +50,7 @@ const Explore = () => {
                                 </div>
                             </div>
                             <div>
-                                <button className="text-sm px-5 py-2 rounded-full bg-white text-black font-bold">
+                                <button className="text-sm px-5 py-2 rounded-full bg-white text-black font-semibold">
                                     Follow
                                 </button>
                             </div>

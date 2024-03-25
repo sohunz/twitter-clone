@@ -5,7 +5,7 @@ import { PiCalendarDuotone } from "react-icons/pi";
 const MyProfileNav = () => {
     return (
         <>
-            <div className="w-full bg-[#15202B] border-gray-700 border-b py-4">
+            <div className="w-full bg-[#15202B] border-gray-700 border-b py-3">
                 <div className="flex items-center px-5 gap-3">
                     <div
                         className="rounded-full p-3 cursor-pointer hover:bg-gray-700"

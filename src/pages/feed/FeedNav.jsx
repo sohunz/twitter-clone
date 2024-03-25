@@ -15,7 +15,7 @@ const FeedNav = () => {
                 <ul className="w-full h-full flex items-center justify-between">
                     <Link
                         to="/foryou"
-                        className={`w-full font-bold text-center py-4 hover:bg-gray-700 cursor-pointer ${
+                        className={`w-full font-semibold text-center py-4 hover:bg-gray-700 cursor-pointer ${
                             activeTab === "For You"
                                 ? "border-b-2 border-blue-500 outline-4 text-white"
                                 : "text-gray-500"
@@ -26,7 +26,7 @@ const FeedNav = () => {
                     </Link>
                     <Link
                         to="/following"
-                        className={`w-full font-bold text-center py-4 hover:bg-gray-700 cursor-pointer  ${
+                        className={`w-full font-semibold text-center py-4 hover:bg-gray-700 cursor-pointer  ${
                             activeTab === "Following"
                                 ? "border-b-2 border-blue-500 text-white"
                                 : "text-gray-500"
