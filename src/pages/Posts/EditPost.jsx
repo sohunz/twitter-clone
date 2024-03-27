@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -9,11 +9,28 @@ const EditPost = () => {
 
     const [newTitle, setNewTitle] = useState([]);
     const data = useContext(DataContext);
+    const [posts, setPosts] = useState([]);
 
-    const result = data.data.posts;
+    const fetchPosts = async () => {
+        try {
+            const response = await axios.get("http://localhost:8000/posts");
+            setPosts(response.data);
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
 
-    const dataFiltered = result.filter((item) => item.id === id);
+    useEffect(() => {
+        fetchPosts();
+        console.log("running..");
+    }, [data]);
+
+    const dataFiltered = posts.filter((item) => item.id === id);
     console.log(dataFiltered);
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
 
     const editPostTitle = async (id) => {
         try {
@@ -21,11 +38,13 @@ const EditPost = () => {
                 await axios.put(`http://localhost:8000/posts/${id}`, {
                     title: newTitle,
                     image: dataFiltered.map((item) => item.image),
+                    // image: "",
                 });
             } else {
                 setNewTitle(dataFiltered.map((item) => item.title));
             }
             navigate("/following");
+            scrollToTop();
         } catch (err) {
             console.log(err.message);
         }

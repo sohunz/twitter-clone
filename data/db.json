@@ -1,12 +1,5 @@
 {
-  "posts": [
-    {
-      "id": "274f",
-      "title": "a",
-      "image": "",
-      "count": 0
-    }
-  ],
+  "posts": [],
   "trending": [
     {
       "id": "1",
