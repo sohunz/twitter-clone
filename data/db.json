@@ -1,5 +1,13 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": "29fb",
+      "title": "a",
+      "image": "",
+      "count": 0,
+      "isLiked": false
+    }
+  ],
   "trending": [
     {
       "id": "1",
