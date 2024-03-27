@@ -12,9 +12,16 @@ const SeeMore = ({ id }) => {
             console.log(err.message);
         }
     };
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     return (
         <ul className="absolute right-0 rounded-lg bg-[#15202B] flex flex-col overflow-hidden">
-            <Link to={`/following/${id}`} className="bg-gray-700 py-2 px-5">
+            <Link
+                to={`/following/${id}`}
+                className="bg-gray-700 py-2 px-5"
+                onClick={scrollToTop}
+            >
                 Edit
             </Link>
 
