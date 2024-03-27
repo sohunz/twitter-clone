@@ -57,7 +57,7 @@ const Post = () => {
             <div className="flex items-center gap-4 mt-5 ">
                 <div className="rounded-full overflow-hidden w-[45px] h-[45px]">
                     <img
-                        src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
+                        src="https://eu-images.contentstack.com/v3/assets/blt949ea8e16e463049/blt50bdd682bfd35c56/64be7cae56d6563cec7eb5dd/ROqzFNVh_400x400.jpg"
                         alt=""
                         className="w-full h-full object-cover"
                     />

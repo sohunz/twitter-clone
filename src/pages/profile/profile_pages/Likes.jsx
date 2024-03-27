@@ -105,7 +105,7 @@ const Likes = () => {
                                                         className="text-gray-400"
                                                     />
                                                     <p className="text-[14px] text-gray-400">
-                                                        143
+                                                        27
                                                     </p>
                                                 </div>
                                                 <div className="flex items-center gap-2">
@@ -123,7 +123,7 @@ const Likes = () => {
                                                         className="text-[#F91880]"
                                                     />
                                                     <p className="text-[14px] text-[#F91880]">
-                                                        9K
+                                                        {item.count}
                                                     </p>
                                                 </div>
                                                 {/* {likedPosts[item.id] ? (
@@ -159,7 +159,7 @@ const Likes = () => {
                                                         className="text-gray-400"
                                                     />
                                                     <p className="text-[14px] text-gray-400">
-                                                        42K
+                                                        2,5K
                                                     </p>
                                                 </div>
                                                 <div className="flex items-center gap-2">
@@ -168,7 +168,7 @@ const Likes = () => {
                                                         className="text-gray-400"
                                                     />
                                                     <p className="text-[14px] text-gray-400">
-                                                        420
+                                                        67
                                                     </p>
                                                 </div>
                                             </div>

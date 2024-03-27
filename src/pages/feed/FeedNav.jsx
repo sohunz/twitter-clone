@@ -17,7 +17,7 @@ const FeedNav = () => {
                         to="/foryou"
                         className={`w-full font-semibold text-center py-4 hover:bg-gray-700 cursor-pointer ${
                             activeTab === "For You"
-                                ? "border-b-2 border-blue-500 outline-4 text-white"
+                                ? "border-b-4 border-[#1D9BF0] outline-4 text-white"
                                 : "text-gray-500"
                         }`}
                         onClick={() => handleTabClick("For You")}
@@ -28,7 +28,7 @@ const FeedNav = () => {
                         to="/following"
                         className={`w-full font-semibold text-center py-4 hover:bg-gray-700 cursor-pointer  ${
                             activeTab === "Following"
-                                ? "border-b-2 border-blue-500 text-white"
+                                ? "border-b-4 border-[#1D9BF0] text-white"
                                 : "text-gray-500"
                         }`}
                         onClick={() => handleTabClick("Following")}

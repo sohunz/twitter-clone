@@ -21,7 +21,7 @@ const Notification = () => {
                             to="all"
                             className={`w-full text-center py-4 hover:bg-gray-700 duration-200 cursor-pointer ${
                                 activeTab === "All"
-                                    ? "border-b-2 border-blue-500"
+                                    ? "border-b-2 border-[#1D9BF0]"
                                     : ""
                             }`}
                             onClick={() => handleTabClick("All")}

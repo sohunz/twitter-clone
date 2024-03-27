@@ -4,7 +4,7 @@ import { PiCalendarDuotone } from "react-icons/pi";
 import { Link, Outlet } from "react-router-dom";
 import { GrLocation } from "react-icons/gr";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
-import { PiBalloon } from "react-icons/pi";
+import { RiLink } from "react-icons/ri";
 
 const MyProfile = () => {
     const [activeTab, setActiveTab] = useState("Posts");
@@ -18,41 +18,62 @@ const MyProfile = () => {
                 <MyProfileNav />
             </div>
             <div className="border-gray-700 border-b">
-                <div className="bg-[#425364] w-ful h-[190px] relative">
-                    <div className="w-[150px] h-[150px] bg-cyan-400 rounded-full absolute bottom-[-75px] right-[50px] left-5 border-4 border-gray-800 overflow-hidden">
+                <div className="bg-[#425364] w-full h-[190px] relative  z-0">
+                    <div className="w-full h-[190px] overflow-hidden">
                         <img
-                            src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
+                            src="https://pbs.twimg.com/profile_banners/323319539/1703842234/1080x360"
+                            alt=""
+                        />
+                    </div>
+                    <div className="w-[150px] h-[150px] bg-[#1D9BF0] rounded-full absolute bottom-[-75px] right-[50px] left-5 border-2 border-gray-800 overflow-hidden z-20">
+                        <img
+                            src="https://admin.itsnicethat.com/images/_fsej_vmVYPAz138de7knz6lEFA=/243516/format-webp%7Cwidth-1440/twitter-x-logo-graphic-design-itsnicethat-01.jpeg"
                             alt=""
                             className="w-full h-full object-cover"
                         />
                     </div>
                 </div>
+                {/* <div className="bg-[#425364] w-ful h-[190px] relative overflow-hidden z-0">
+                    <img
+                        src="https://pbs.twimg.com/profile_banners/224359740/1706041090/1080x360"
+                        alt=""
+                    />
+                    <div className="w-[150px] h-[150px] bg-[#1D9BF0] rounded-full absolute bottom-[-75px] right-[50px] left-5 border-2 border-gray-800 overflow-hidden z-20">
+                        <img
+                            src="https://admin.itsnicethat.com/images/_fsej_vmVYPAz138de7knz6lEFA=/243516/format-webp%7Cwidth-1440/twitter-x-logo-graphic-design-itsnicethat-01.jpeg"
+                            alt=""
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                </div> */}
+
                 <div className="px-5 flex justify-between items-start">
                     <div className="pt-24 ">
                         <div>
                             <span className="flex items-center gap-1">
-                                <p className="font-bold text-2xl">
-                                    Olivia Rodrigo
-                                </p>
+                                <p className="font-bold text-2xl">Sohunz</p>
                                 <RiVerifiedBadgeFill
                                     size={18}
                                     className="text-[#1D9BF0]"
                                 />
                             </span>
-                            <p className="text-gray-400">@sohun</p>
+                            <p className="text-gray-400">@sohunz</p>
                         </div>
                         <div className=" mt-4">
                             <div>
-                                <p>
-                                    spicy pisces / my new album GUTS out now!!!
-                                    💌
-                                </p>
+                                <p>what's happening?!</p>
                             </div>
 
                             <div className=" text-gray-400 flex items-center gap-2">
                                 <div className="flex items-center gap-1">
                                     <GrLocation />
-                                    <p>Cambodia</p>
+                                    <p>Everywhere</p>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                    <RiLink size={22} className="pt-1" />
+                                    <p className="text-[#1D9BF0] my-2">
+                                        <a href="">about.x.com</a>
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <PiCalendarDuotone
@@ -60,13 +81,7 @@ const MyProfile = () => {
                                         className="pt-1"
                                     />
                                     <p className="text-gray-400 my-2">
-                                        Joined April 2023
-                                    </p>
-                                </div>
-                                <div className="flex items-center gap-1">
-                                    <PiBalloon size={22} className="pt-1" />
-                                    <p className="text-gray-400 my-2">
-                                        Born November 23
+                                        Joined February 2007
                                     </p>
                                 </div>
                             </div>
@@ -95,7 +110,7 @@ const MyProfile = () => {
                                 to="posts"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Posts"
-                                        ? "border-b-2 border-blue-500 font-semibold"
+                                        ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
                                 }`}
                                 onClick={() => handleTabClick("Posts")}
@@ -106,7 +121,7 @@ const MyProfile = () => {
                                 to="replies"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Replies"
-                                        ? "border-b-2 border-blue-500 font-semibold"
+                                        ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
                                 }`}
                                 onClick={() => handleTabClick("Replies")}
@@ -117,7 +132,7 @@ const MyProfile = () => {
                                 to="highlights"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Highlights"
-                                        ? "border-b-2 border-blue-500 font-semibold"
+                                        ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
                                 }`}
                                 onClick={() => handleTabClick("Highlights")}
@@ -128,7 +143,7 @@ const MyProfile = () => {
                                 to="articles"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Articls"
-                                        ? "border-b-2 border-blue-500 font-semibold"
+                                        ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
                                 }`}
                                 onClick={() => handleTabClick("Articls")}
@@ -139,7 +154,7 @@ const MyProfile = () => {
                                 to="media"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Media"
-                                        ? "border-b-2 border-blue-500 font-semibold"
+                                        ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
                                 }`}
                                 onClick={() => handleTabClick("Media")}
@@ -150,7 +165,7 @@ const MyProfile = () => {
                                 to="likes"
                                 className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
                                     activeTab === "Likes"
-                                        ? "border-b-2 border-blue-500 font-semibold"
+                                        ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
                                 }`}
                                 onClick={() => handleTabClick("Likes")}

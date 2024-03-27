@@ -103,7 +103,7 @@ const Explore = () => {
                         <div
                             className={`w-[50%] bg-[#2a323d] rounded-xl p-5 text-left ${
                                 selectedBox === "individual"
-                                    ? "outline-blue-500 outline cursor-pointer"
+                                    ? "outline-[#1D9BF0] outline cursor-pointer"
                                     : "cursor-pointer"
                             }`}
                             onClick={() => handleBoxClick("individual")}
@@ -119,7 +119,7 @@ const Explore = () => {
                         <div
                             className={`bg-[#2a323d] rounded-xl w-[50%] p-5 text-left ${
                                 selectedBox === "organization"
-                                    ? "outline-blue-500 outline cursor-pointer"
+                                    ? "outline-[#1D9BF0] outline cursor-pointer"
                                     : "cursor-pointer"
                             }`}
                             onClick={() => handleBoxClick("organization")}

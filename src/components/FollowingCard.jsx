@@ -107,7 +107,7 @@ const FollowingCard = () => {
                             className="rounded-full overflow-hidden w-[45px] min-w-[45px] h-[45px] min-h-[45px]"
                         >
                             <img
-                                src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
+                                src="https://admin.itsnicethat.com/images/_fsej_vmVYPAz138de7knz6lEFA=/243516/format-webp%7Cwidth-1440/twitter-x-logo-graphic-design-itsnicethat-01.jpeg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -119,7 +119,7 @@ const FollowingCard = () => {
                             >
                                 <span className="flex items-center gap-1">
                                     <p className="font-semibold text-[17px]">
-                                        Olivia Rodrigo
+                                        Sohunz
                                     </p>
                                     <RiVerifiedBadgeFill
                                         size={18}
@@ -127,7 +127,7 @@ const FollowingCard = () => {
                                     />
                                 </span>
                                 <div className="flex items-center gap-0">
-                                    <p className="text-gray-400">@sohun</p>
+                                    <p className="text-gray-400">@sohunz</p>
                                     <div className="">
                                         <PiDotLight />
                                     </div>
@@ -146,7 +146,7 @@ const FollowingCard = () => {
                                             className="text-gray-400"
                                         />
                                         <p className="text-[14px] text-gray-400">
-                                            143
+                                            27
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -177,7 +177,7 @@ const FollowingCard = () => {
                                                 }
                                             />
                                             <p className="text-[14px] text-[#F91880]">
-                                                9K
+                                                {item.count}
                                             </p>
                                         </div>
                                     ) : (
@@ -190,7 +190,7 @@ const FollowingCard = () => {
                                                 }
                                             />
                                             <p className="text-[14px] text-gray-400">
-                                                9K
+                                                {item.count}
                                             </p>
                                         </div>
                                     )}
@@ -200,7 +200,7 @@ const FollowingCard = () => {
                                             className="text-gray-400"
                                         />
                                         <p className="text-[14px] text-gray-400">
-                                            42K
+                                            2,5K
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-2">
@@ -209,7 +209,7 @@ const FollowingCard = () => {
                                             className="text-gray-400"
                                         />
                                         <p className="text-[14px] text-gray-400">
-                                            420
+                                            67
                                         </p>
                                     </div>
                                 </div>

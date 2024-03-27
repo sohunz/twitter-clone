@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BiArrowBack } from "react-icons/bi";
-import { PiCalendarDuotone } from "react-icons/pi";
+import { RiVerifiedBadgeFill } from "react-icons/ri";
 import axios from "axios";
 import DataContext from "../../contexts/DataContext";
 
@@ -32,7 +32,14 @@ const MyProfileNav = () => {
                         <BiArrowBack size={19} />
                     </div>
                     <div className="flex flex-col justify-start">
-                        <p className="font-bold text-lg">Olivia Rodrigo</p>
+                        {/* <p className="font-bold text-lg">Olivia Rodrigo</p> */}
+                        <span className="flex items-center gap-1">
+                            <p className="font-bold text-lg">Sohunz</p>
+                            <RiVerifiedBadgeFill
+                                size={18}
+                                className="text-[#1D9BF0]"
+                            />
+                        </span>
                         <p className="text-sm text-gray-400">
                             {posts.length} posts
                         </p>
