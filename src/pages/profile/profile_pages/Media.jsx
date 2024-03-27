@@ -30,7 +30,7 @@ const Media = () => {
 
     console.log(media);
 
-    const handleMedia = media.filter((itme) => itme.image !== "");
+    const handleMedia = media.filter((item) => item.image !== "");
 
     return (
         // <div className="w-full">

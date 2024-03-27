@@ -1,23 +1,31 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import DataContext from "../../contexts/DataContext";
 
 const EditPost = () => {
     const { id } = useParams();
 
     const [newTitle, setNewTitle] = useState([]);
+    const data = useContext(DataContext);
+
+    const result = data.data.posts;
+
+    const dataFiltered = result.filter((item) => item.id === id);
+    console.log(dataFiltered);
 
     const editPostTitle = async (id) => {
         try {
             if (newTitle.length !== 0) {
                 await axios.put(`http://localhost:8000/posts/${id}`, {
                     title: newTitle,
+                    image: dataFiltered.map((item) => item.image),
                 });
-                navigate("/following");
             } else {
-                console.log("enter a post title");
+                setNewTitle(dataFiltered.map((item) => item.title));
             }
+            navigate("/following");
         } catch (err) {
             console.log(err.message);
         }
@@ -31,19 +39,14 @@ const EditPost = () => {
             <input
                 type="text"
                 value={newTitle}
-                placeholder="New Title"
+                placeholder={dataFiltered.map((item) => item.title)}
                 className="w-full py-3 pl-7 pr-5 rounded-full bg-gray-800 outline-none mb-3"
                 onChange={(e) => setNewTitle(e.target.value)}
             />{" "}
             <div className="mt-3">
                 <button
                     onClick={() => editPostTitle(id)}
-                    className={
-                        newTitle.length === 0
-                            ? " bg-[#1D9BF0] px-7 py-[9px] rounded-full cursor-default opacity-50"
-                            : " bg-[#1D9BF0] px-7 py-[9px] rounded-full cursor-pointer"
-                    }
-                    disabled={newTitle.length === 0}
+                    className=" bg-[#1D9BF0] px-7 py-[9px] rounded-full cursor-pointer"
                 >
                     Update
                 </button>

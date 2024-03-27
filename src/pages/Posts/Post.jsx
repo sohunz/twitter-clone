@@ -45,7 +45,7 @@ const Post = () => {
         axios
             .post("http://localhost:8000/posts", getInput)
             .then(() => {
-                setGetInput({ title: "", image: "" }); // Clear title and image after successful post
+                setGetInput({ title: "", image: "", count: 0 }); // Clear title and image after successful post
             })
             .catch((error) => {
                 console.error("Error submitting post:", error);
