@@ -1,5 +1,12 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "id": "274f",
+      "title": "a",
+      "image": "",
+      "count": 0
+    }
+  ],
   "trending": [
     {
       "id": "1",

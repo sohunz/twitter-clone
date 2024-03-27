@@ -11,6 +11,7 @@ import { RiMoreLine } from "react-icons/ri";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
+import SeeMore from "../modal/SeeMore";
 
 const FollowingCard = () => {
     const data = useContext(DataContext);
@@ -85,14 +86,14 @@ const FollowingCard = () => {
     };
 
     // delete
-    const deletePost = async (id) => {
-        try {
-            await axios.delete(`http://localhost:8000/posts/${id}`);
-            setPosts(posts.filter((post) => post.id !== id));
-        } catch (err) {
-            console.log(err.message);
-        }
-    };
+    // const deletePost = async (id) => {
+    //     try {
+    //         await axios.delete(`http://localhost:8000/posts/${id}`);
+    //         setPosts(posts.filter((post) => post.id !== id));
+    //     } catch (err) {
+    //         console.log(err.message);
+    //     }
+    // };
 
     return (
         <div>
@@ -225,24 +226,9 @@ const FollowingCard = () => {
                                     modalToggles[index] ? "block" : "hidden"
                                 }
                             >
+                                {/* modal */}
                                 <div className=" relative">
-                                    <ul className="absolute right-0 rounded-lg bg-[#15202B] flex flex-col overflow-hidden">
-                                        <Link
-                                            to={`/following/${item.id}`}
-                                            className="bg-gray-700 py-2 px-5"
-                                            onClick={() =>
-                                                editPostTitle(item.id)
-                                            }
-                                        >
-                                            Edit
-                                        </Link>
-                                        <li
-                                            className="bg-gray-700 py-2 px-5"
-                                            onClick={() => deletePost(item.id)}
-                                        >
-                                            Delete
-                                        </li>
-                                    </ul>
+                                    <SeeMore id={item.id} />
                                 </div>
                             </div>
                         </span>
