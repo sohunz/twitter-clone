@@ -9,10 +9,16 @@ import axios from "axios";
 import Resizer from "react-image-file-resizer";
 
 const Post = () => {
+    const createDate = new Date().toLocaleDateString("en-US", {
+        month: "short",
+        day: "2-digit",
+    });
+
     const [getInput, setGetInput] = useState({
         title: "",
         image: "",
         count: 0,
+        createDate: createDate,
     });
 
     const handleChange = async (e) => {
@@ -45,7 +51,13 @@ const Post = () => {
         axios
             .post("http://localhost:8000/posts", getInput)
             .then(() => {
-                setGetInput({ title: "", image: "", count: 0, isLiked: false }); // Clear title and image after successful post
+                setGetInput({
+                    title: "",
+                    image: "",
+                    count: 0,
+                    isLiked: false,
+                    createDate,
+                }); // Clear title and image after successful post
             })
             .catch((error) => {
                 console.error("Error submitting post:", error);

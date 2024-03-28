@@ -85,7 +85,9 @@ const Likes = () => {
                                             <div className="">
                                                 <PiDotLight />
                                             </div>
-                                            <p className="text-gray-400">1m</p>
+                                            <p className="text-gray-400">
+                                                {item.createDate}
+                                            </p>
                                         </div>
                                     </Link>
                                     <div>

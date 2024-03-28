@@ -35,7 +35,10 @@ const EditPost = () => {
     // console.log(count[0]);
 
     const isLiked = dataFiltered.map((item) => item.isLiked);
-    console.log(isLiked[0]);
+    // console.log(isLiked[0]);
+
+    const createDate = dataFiltered.map((item) => item.createDate);
+    console.log(createDate[0]);
 
     const scrollToTop = () => {
         window.scrollTo(0, 0);
@@ -49,6 +52,7 @@ const EditPost = () => {
                     image: img[0],
                     count: count[0],
                     isLiked: isLiked[0],
+                    createDate: createDate,
                 });
             } else {
                 setNewTitle(dataFiltered.map((item) => item.title));
