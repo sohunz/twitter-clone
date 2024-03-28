@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import DataContext from "../../contexts/DataContext";
+import { IoSettingsOutline } from "react-icons/io5";
+import ThemeContext from "../../contexts/themes/ThemeContext";
 
 const Sidebar = () => {
     const data = useContext(DataContext);
@@ -40,8 +42,16 @@ const Sidebar = () => {
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };
+
+    const { theme } = useContext(ThemeContext);
     return (
-        <div className=" min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r ">
+        <div
+            className={
+                theme === "dark"
+                    ? "min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r "
+                    : "bg-white text-black min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r "
+            }
+        >
             <div className="w-full h-screen flex flex-col gap-3 justify-between px-2">
                 <div className="mb-2">
                     <div className=" px-1 pt-1">
@@ -54,19 +64,37 @@ const Sidebar = () => {
                     </div>
                     <ul>
                         <Link to="/following" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold  ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <GoHomeFill size={28} />
                                 <p>Home</p>
                             </li>
                         </Link>
                         <Link to="/explore" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold  ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <FiSearch size={28} />
                                 <p>Explore</p>
                             </li>
                         </Link>
                         <Link to="/notification" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold relative ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold relative"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold relative"
+                                }
+                            >
                                 <RiNotification4Line size={28} />
                                 <p>Notifications</p>
                                 {notificationCount > 0 && (
@@ -79,45 +107,88 @@ const Sidebar = () => {
                             </li>
                         </Link>
                         <Link to="message" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <MdOutlineEmail size={28} />
                                 <p>Messages</p>
                             </li>
                         </Link>
                         <Link to="/list" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <RiFileListLine size={28} />
                                 <p>Lists</p>
                             </li>
                         </Link>
                         <Link to="/bookmark" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <VscBookmark size={28} />
                                 <p>Bookmarks</p>
                             </li>
                         </Link>
                         <Link to="/community" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <HiOutlineUsers size={28} />
                                 <p>Communities</p>
                             </li>
                         </Link>
                         <Link to="/premium" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <FaXTwitter size={28} />
                                 <p>Premium</p>
                             </li>
                         </Link>
                         <Link to="/profile" onClick={scrollToTop}>
-                            <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
+                            <li
+                                className={
+                                    theme === "dark"
+                                        ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                }
+                            >
                                 <HiOutlineUser size={28} />
                                 <p>Peoples</p>
                             </li>
                         </Link>
-                        <li className=" flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold ">
-                            <CiCircleMore size={28} />
-                            <p>More</p>
-                        </li>
+                        <Link
+                            to="/setting"
+                            className={
+                                theme === "dark"
+                                    ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
+                                    : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                            }
+                        >
+                            <IoSettingsOutline size={28} />
+                            <p>Setting</p>
+                        </Link>
                         <li className=" flex items-center justify-center gap-4 text-lg p-3 rounded-full cursor-pointer bg-[#1D9BF0] mt-2 font-semibold">
                             <p>Post</p>
                         </li>
@@ -125,7 +196,11 @@ const Sidebar = () => {
                 </div>
                 <Link
                     to="/user"
-                    className="flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5"
+                    className={
+                        theme === "dark"
+                            ? "flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5"
+                            : "flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-200 rounded-full cursor-pointer  mb-5"
+                    }
                     onClick={scrollToTop}
                 >
                     <div className="flex gap-3">

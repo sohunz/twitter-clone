@@ -26,80 +26,115 @@ import Highlights from "./pages/profile/profile_pages/Highlights";
 import Likes from "./pages/profile/profile_pages/Likes";
 import Media from "./pages/profile/profile_pages/Media";
 import Replies from "./pages/profile/profile_pages/Replies";
+import Setting from "./settings/Setting";
+import ThemeProvider from "./contexts/themes/ThemeProvider";
 
 const App = () => {
     return (
         <DataProvider>
             <ToggleProvider>
-                <div className="max-w-[1280px] mx-auto flex">
-                    <div className="max-w-[280px] flex-1">
-                        <div className="sticky top-0">
-                            <Sidebar />
+                <ThemeProvider>
+                    <div className="max-w-[1280px] mx-auto flex">
+                        <div className="max-w-[280px] flex-1">
+                            <div className="sticky top-0">
+                                <Sidebar />
+                            </div>
+                        </div>
+                        <div className="flex-1">
+                            <div className="flex gap-8">
+                                <Routes>
+                                    <Route path="/" element={<Feed />}>
+                                        <Route index element={<Following />} />
+                                        <Route
+                                            path="following"
+                                            element={<Following />}
+                                        />
+                                        <Route
+                                            path="/following/:id"
+                                            element={<EditPost />}
+                                        />
+                                        <Route
+                                            path="foryou"
+                                            element={<ForYou />}
+                                        />
+                                    </Route>
+                                    <Route
+                                        path="explore"
+                                        element={<Explore />}
+                                    />
+                                    <Route
+                                        path="notification"
+                                        element={<Notification />}
+                                    >
+                                        <Route index element={<All />} />
+                                        <Route path="all" element={<All />} />
+                                        <Route
+                                            path="verified"
+                                            element={<Verified />}
+                                        />
+                                        <Route
+                                            path="mention"
+                                            element={<Mention />}
+                                        />
+                                    </Route>
+                                    <Route
+                                        path="message"
+                                        element={<Message />}
+                                    />
+                                    <Route path="list" element={<List />} />
+                                    <Route
+                                        path="bookmark"
+                                        element={<Bookmark />}
+                                    />
+                                    <Route
+                                        path="community"
+                                        element={<Community />}
+                                    />
+                                    <Route
+                                        path="premium"
+                                        element={<Premium />}
+                                    />
+                                    <Route
+                                        path="profile"
+                                        element={<Profile />}
+                                    />
+                                    <Route path="user" element={<MyProfile />}>
+                                        <Route index element={<Post />} />
+                                        <Route
+                                            path="posts"
+                                            element={<Post />}
+                                        />
+                                        <Route
+                                            path="replies"
+                                            element={<Replies />}
+                                        />
+                                        <Route
+                                            path="highlights"
+                                            element={<Highlights />}
+                                        />
+                                        <Route
+                                            path="articles"
+                                            element={<Articles />}
+                                        />
+                                        <Route
+                                            path="media"
+                                            element={<Media />}
+                                        />
+                                        <Route
+                                            path="likes"
+                                            element={<Likes />}
+                                        />
+                                    </Route>
+                                    <Route
+                                        path="setting"
+                                        element={<Setting />}
+                                    />
+                                </Routes>
+                                <Trending />
+                            </div>
                         </div>
                     </div>
-                    <div className="flex-1">
-                        <div className="flex gap-8">
-                            <Routes>
-                                <Route path="/" element={<Feed />}>
-                                    <Route index element={<Following />} />
-                                    <Route
-                                        path="following"
-                                        element={<Following />}
-                                    />
-                                    <Route
-                                        path="/following/:id"
-                                        element={<EditPost />}
-                                    />
-                                    <Route path="foryou" element={<ForYou />} />
-                                </Route>
-                                <Route path="explore" element={<Explore />} />
-                                <Route
-                                    path="notification"
-                                    element={<Notification />}
-                                >
-                                    <Route index element={<All />} />
-                                    <Route path="all" element={<All />} />
-                                    <Route
-                                        path="verified"
-                                        element={<Verified />}
-                                    />
-                                    <Route
-                                        path="mention"
-                                        element={<Mention />}
-                                    />
-                                </Route>
-                                <Route path="message" element={<Message />} />
-                                <Route path="list" element={<List />} />
-                                <Route path="bookmark" element={<Bookmark />} />
-                                <Route
-                                    path="community"
-                                    element={<Community />}
-                                />
-                                <Route path="premium" element={<Premium />} />
-                                <Route path="profile" element={<Profile />} />
-                                <Route path="user" element={<MyProfile />}>
-                                    <Route index element={<Post />} />
-                                    <Route path="posts" element={<Post />} />
-                                    <Route
-                                        path="replies"
-                                        element={<Replies />}
-                                    />
-                                    <Route
-                                        path="highlights"
-                                        element={<Highlights />}
-                                    />
-                                    <Route
-                                        path="articles"
-                                        element={<Articles />}
-                                    />
-                                    <Route path="media" element={<Media />} />
-                                    <Route path="likes" element={<Likes />} />
-                                </Route>
-                            </Routes>
-                            <Trending />
-                        </div>
-                    </div>
-                </div>
+                </ThemeProvider>
             </ToggleProvider>
         </DataProvider>
     );
