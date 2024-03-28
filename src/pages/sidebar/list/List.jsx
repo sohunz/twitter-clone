@@ -9,10 +9,82 @@ const Explore = () => {
                 <ListNav />
             </div>
             <div>
-                <p className="px-5 mt-5 mb-10 font-bold text-xl ">
+                <p className="px-5 mt-5 mb-5 font-bold text-xl ">
                     Discover new Lists
                 </p>
-                <div className="px-5 flex justify-between items-center hover:bg-[#1E2732] py-4">
+                <div className="px-5 mb-3 flex justify-between items-center hover:bg-[#1E2732] py-4">
+                    <div className="flex gap-5">
+                        <div className="rounded-xl overflow-hidden w-[70px] h-[70px]">
+                            <img
+                                src="https://static01.nyt.com/images/2022/12/30/multimedia/30soccer-ronaldo-1-76fd/30soccer-ronaldo-1-76fd-mediumSquareAt3X.jpg"
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col justify-between">
+                            <div className="flex flex-col">
+                                <div>
+                                    <p className="font-bold">
+                                        Cristiano Ronaldo Lover
+                                    </p>
+                                    <p className="text-[13px] text-gray-400">
+                                        250K Members
+                                    </p>
+                                </div>
+                                <div className="flex text-[13px] gap-2 mt-2">
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #sport
+                                    </p>
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #ronaldo
+                                    </p>
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #football
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="border p-2 bg-white rounded-full cursor-pointer">
+                        <IoAdd color="black" size={20} />
+                    </div>
+                </div>
+                <div className="px-5 mb-3 flex justify-between items-center hover:bg-[#1E2732] py-4">
+                    <div className="flex gap-5">
+                        <div className="rounded-xl overflow-hidden w-[70px] h-[70px]">
+                            <img
+                                src="https://pbs.twimg.com/card_img/1768261730034225152/AUimRM37?format=png&name=small"
+                                alt=""
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="flex flex-col justify-between">
+                            <div className="flex flex-col">
+                                <div>
+                                    <p className="font-bold">SamSung</p>
+                                    <p className="text-[13px] text-gray-400">
+                                        123K Members
+                                    </p>
+                                </div>
+                                <div className="flex text-[13px] gap-2 mt-2">
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #samsung
+                                    </p>
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #phone
+                                    </p>
+                                    <p className="bg-gray-700 rounded-full px-3">
+                                        #technology
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="border p-2 bg-white rounded-full cursor-pointer">
+                        <IoAdd color="black" size={20} />
+                    </div>
+                </div>
+                <div className="px-5 mb-3 flex justify-between items-center hover:bg-[#1E2732] py-4">
                     <div className="flex gap-5">
                         <div className="rounded-xl overflow-hidden w-[70px] h-[70px]">
                             <img
