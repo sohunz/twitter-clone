@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProfileNav from "./ProfileNav";
 import axios from "axios";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
+import ThemeContext from "../../../contexts/themes/ThemeContext";
 
 const Explore = () => {
     const [users, setUsers] = useState([]);
@@ -14,8 +15,16 @@ const Explore = () => {
         fetchUsers();
     }, []);
 
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <div className="w-full border-gray-700 border-r">
+        <div
+            className={
+                theme === "dark"
+                    ? "w-full border-gray-700 border-r"
+                    : "w-full border-gray-200 border-r"
+            }
+        >
             <div className="sticky z-50 top-0">
                 <ProfileNav />
             </div>
@@ -25,7 +34,11 @@ const Explore = () => {
             {users.map((item) => {
                 return (
                     <li
-                        className="hover:bg-[#2a323d] duration-200 cursor-pointer py-4 px-5 list-none"
+                        className={
+                            theme === "dark"
+                                ? "hover:bg-[#2a323d] duration-200 cursor-pointer py-4 px-5 list-none"
+                                : "hover:bg-[#EFF3F4] duration-200 cursor-pointer py-4 px-5 list-none"
+                        }
                         key={item.id}
                     >
                         <div className="flex items-center justify-between">
@@ -44,13 +57,25 @@ const Explore = () => {
                                             className="text-[#1D9BF0]"
                                         />
                                     </span>
-                                    <p className="text-gray-400">
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-500"
+                                        }
+                                    >
                                         @{item.username}
                                     </p>
                                 </div>
                             </div>
                             <div>
-                                <button className="text-sm px-5 py-2 rounded-full bg-white text-black font-semibold">
+                                <button
+                                    className={
+                                        theme === "dark"
+                                            ? "text-sm px-5 py-2 rounded-full bg-white text-black font-semibold"
+                                            : "text-sm px-5 py-2 rounded-full bg-black text-white font-semibold"
+                                    }
+                                >
                                     Follow
                                 </button>
                             </div>

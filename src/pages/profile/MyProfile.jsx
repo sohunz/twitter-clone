@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import MyProfileNav from "./MyProfileNav";
 import { PiCalendarDuotone } from "react-icons/pi";
 import { Link, Outlet } from "react-router-dom";
 import { GrLocation } from "react-icons/gr";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { RiLink } from "react-icons/ri";
+import ThemeContext from "../../contexts/themes/ThemeContext";
 
 const MyProfile = () => {
     const [activeTab, setActiveTab] = useState("Posts");
@@ -12,6 +13,8 @@ const MyProfile = () => {
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
     };
+
+    const { theme } = useContext(ThemeContext);
     return (
         <div className="w-full border-gray-700 border-r">
             <div className="sticky z-50 top-0">
@@ -57,7 +60,15 @@ const MyProfile = () => {
                                     className="text-[#1D9BF0]"
                                 />
                             </span>
-                            <p className="text-gray-400">@sohunz</p>
+                            <p
+                                className={
+                                    theme === "dark"
+                                        ? "text-gray-400"
+                                        : "text-gray-600"
+                                }
+                            >
+                                @sohunz
+                            </p>
                         </div>
                         <div className=" mt-4">
                             <div>
@@ -67,12 +78,29 @@ const MyProfile = () => {
                             <div className=" text-gray-400 flex items-center gap-2">
                                 <div className="flex items-center gap-1">
                                     <GrLocation />
-                                    <p>Everywhere</p>
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-600"
+                                        }
+                                    >
+                                        Everywhere
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <RiLink size={22} className="pt-1" />
                                     <p className="text-[#1D9BF0] my-2">
-                                        <a href="">about.x.com</a>
+                                        <a
+                                            href=""
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-600"
+                                            }
+                                        >
+                                            about.x.com
+                                        </a>
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-1">
@@ -80,7 +108,13 @@ const MyProfile = () => {
                                         size={22}
                                         className="pt-1"
                                     />
-                                    <p className="text-gray-400 my-2">
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400 my-2"
+                                                : "text-gray-600 my-2"
+                                        }
+                                    >
                                         Joined February 2007
                                     </p>
                                 </div>
@@ -89,11 +123,27 @@ const MyProfile = () => {
                         <div className="flex items-center gap-4">
                             <p className="text-sm">
                                 <span className="font-bold">12 </span>
-                                <span className="text-gray-400">Following</span>
+                                <span
+                                    className={
+                                        theme === "dark"
+                                            ? "text-gray-400"
+                                            : "text-gray-600"
+                                    }
+                                >
+                                    Following
+                                </span>
                             </p>
                             <p className="text-sm">
                                 <span className="font-bold">24M </span>
-                                <span className="text-gray-400">Follower</span>
+                                <span
+                                    className={
+                                        theme === "dark"
+                                            ? "text-gray-400"
+                                            : "text-gray-600"
+                                    }
+                                >
+                                    Follower
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -108,7 +158,11 @@ const MyProfile = () => {
                         <nav className="w-full flex justify-evenly">
                             <Link
                                 to="posts"
-                                className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
+                                className={`w-full text-center py-4 ${
+                                    theme === "dark"
+                                        ? "hover:bg-gray-700"
+                                        : "hover:bg-[#EFF3F4]"
+                                }  cursor-pointer ${
                                     activeTab === "Posts"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
@@ -119,7 +173,11 @@ const MyProfile = () => {
                             </Link>
                             <Link
                                 to="replies"
-                                className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
+                                className={`w-full text-center py-4 ${
+                                    theme === "dark"
+                                        ? "hover:bg-gray-700"
+                                        : "hover:bg-[#EFF3F4]"
+                                }  cursor-pointer ${
                                     activeTab === "Replies"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
@@ -130,7 +188,11 @@ const MyProfile = () => {
                             </Link>
                             <Link
                                 to="highlights"
-                                className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
+                                className={`w-full text-center py-4 ${
+                                    theme === "dark"
+                                        ? "hover:bg-gray-700"
+                                        : "hover:bg-[#EFF3F4]"
+                                }  cursor-pointer ${
                                     activeTab === "Highlights"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
@@ -141,7 +203,11 @@ const MyProfile = () => {
                             </Link>
                             <Link
                                 to="articles"
-                                className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
+                                className={`w-full text-center py-4 ${
+                                    theme === "dark"
+                                        ? "hover:bg-gray-700"
+                                        : "hover:bg-[#EFF3F4]"
+                                }  cursor-pointer ${
                                     activeTab === "Articls"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
@@ -152,7 +218,11 @@ const MyProfile = () => {
                             </Link>
                             <Link
                                 to="media"
-                                className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
+                                className={`w-full text-center py-4 ${
+                                    theme === "dark"
+                                        ? "hover:bg-gray-700"
+                                        : "hover:bg-[#EFF3F4]"
+                                }  cursor-pointer ${
                                     activeTab === "Media"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"
@@ -163,7 +233,11 @@ const MyProfile = () => {
                             </Link>
                             <Link
                                 to="likes"
-                                className={`w-full text-center py-4 hover:bg-gray-700  cursor-pointer ${
+                                className={`w-full text-center py-4 ${
+                                    theme === "dark"
+                                        ? "hover:bg-gray-700"
+                                        : "hover:bg-[#EFF3F4]"
+                                }  cursor-pointer ${
                                     activeTab === "Likes"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : "text-gray-400"

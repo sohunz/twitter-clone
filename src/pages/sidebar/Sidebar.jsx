@@ -49,7 +49,7 @@ const Sidebar = () => {
             className={
                 theme === "dark"
                     ? "min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r "
-                    : "bg-white text-black min-w-[280px] max-w-[280px] min-h-screen border-gray-700 border-r "
+                    : "bg-white text-black min-w-[280px] max-w-[280px] min-h-screen border-gray-200 border-r "
             }
         >
             <div className="w-full h-screen flex flex-col gap-3 justify-between px-2">
@@ -68,7 +68,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                                 }
                             >
                                 <GoHomeFill size={28} />
@@ -80,7 +80,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                                 }
                             >
                                 <FiSearch size={28} />
@@ -92,13 +92,19 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold relative"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold relative"
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold relative"
                                 }
                             >
                                 <RiNotification4Line size={28} />
                                 <p>Notifications</p>
                                 {notificationCount > 0 && (
-                                    <div className="absolute bg-red-600 w-[20px] h-[20px] rounded-full flex justify-center items-center top-2 left-7">
+                                    <div
+                                        className={
+                                            theme === "dark"
+                                                ? "absolute bg-red-600 w-[20px] h-[20px] rounded-full flex justify-center items-center top-2 left-7"
+                                                : "absolute bg-red-600 w-[20px] h-[20px] rounded-full flex justify-center items-center top-2 left-7 text-white"
+                                        }
+                                    >
                                         <p className="text-[12px] font-normal">
                                             {notificationCount}
                                         </p>
@@ -111,7 +117,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                                 }
                             >
                                 <MdOutlineEmail size={28} />
@@ -123,7 +129,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                                 }
                             >
                                 <RiFileListLine size={28} />
@@ -135,7 +141,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold"
                                 }
                             >
                                 <VscBookmark size={28} />
@@ -147,7 +153,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                                 }
                             >
                                 <HiOutlineUsers size={28} />
@@ -159,7 +165,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                                 }
                             >
                                 <FaXTwitter size={28} />
@@ -171,7 +177,7 @@ const Sidebar = () => {
                                 className={
                                     theme === "dark"
                                         ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                        : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                                 }
                             >
                                 <HiOutlineUser size={28} />
@@ -183,8 +189,9 @@ const Sidebar = () => {
                             className={
                                 theme === "dark"
                                     ? " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-800 rounded-full cursor-pointer font-semibold"
-                                    : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-gray-200 rounded-full cursor-pointer font-semibold  "
+                                    : " flex items-center gap-4 text-lg py-3 px-4 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer font-semibold  "
                             }
+                            onClick={scrollToTop}
                         >
                             <IoSettingsOutline size={28} />
                             <p>Setting</p>
@@ -199,7 +206,7 @@ const Sidebar = () => {
                     className={
                         theme === "dark"
                             ? "flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-800 rounded-full cursor-pointer  mb-5"
-                            : "flex justify-between items-center py-3 px-2 duration-200 hover:bg-gray-200 rounded-full cursor-pointer  mb-5"
+                            : "flex justify-between items-center py-3 px-2 duration-200 hover:bg-[#EFF3F4] rounded-full cursor-pointer  mb-5"
                     }
                     onClick={scrollToTop}
                 >

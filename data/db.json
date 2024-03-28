@@ -5,7 +5,8 @@
       "title": "First Tweet!",
       "image": "",
       "count": 0,
-      "createDate": "Mar 28"
+      "createDate": "Mar 28",
+      "isLiked": false
     },
     {
       "id": "df81",

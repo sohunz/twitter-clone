@@ -3,6 +3,7 @@ import { BiArrowBack } from "react-icons/bi";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import axios from "axios";
 import DataContext from "../../contexts/DataContext";
+import ThemeContext from "../../contexts/themes/ThemeContext";
 
 const MyProfileNav = () => {
     const data = useContext(DataContext);
@@ -21,9 +22,17 @@ const MyProfileNav = () => {
         fetchUsers();
     }, [data]);
 
+    const { theme } = useContext(ThemeContext);
+
     return (
         <>
-            <div className="w-full bg-[#15202B] border-gray-700 border-b py-3">
+            <div
+                className={
+                    theme === "dark"
+                        ? "w-full bg-[#15202B] border-gray-700 border-b py-3"
+                        : "w-full bg-white text-black border-gray-200 border-b py-3"
+                }
+            >
                 <div className="flex items-center px-5 gap-3">
                     <div
                         className="rounded-full p-3 cursor-pointer hover:bg-gray-700"
@@ -40,7 +49,13 @@ const MyProfileNav = () => {
                                 className="text-[#1D9BF0]"
                             />
                         </span>
-                        <p className="text-sm text-gray-400">
+                        <p
+                            className={
+                                theme === "dark"
+                                    ? "text-sm text-gray-400"
+                                    : "text-sm text-gray-500"
+                            }
+                        >
                             {posts.length} posts
                         </p>
                     </div>

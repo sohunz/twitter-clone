@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FiSearch } from "react-icons/fi";
+import ThemeContext from "../../contexts/themes/ThemeContext";
 
 const TrendingNav = () => {
+    const { theme } = useContext(ThemeContext);
     return (
-        <div className="w-full py-2 bg-[#15202B]">
+        <div
+            className={
+                theme === "dark"
+                    ? "w-full py-2 bg-[#15202B]"
+                    : "w-full py-2 bg-white text-black"
+            }
+        >
             <div className="relative">
                 <FiSearch
                     size={19}
@@ -12,7 +20,11 @@ const TrendingNav = () => {
                 <input
                     type="text"
                     placeholder="Search"
-                    className="w-full py-3 pl-14 pr-5 rounded-full bg-gray-800 outline-none"
+                    className={
+                        theme === "dark"
+                            ? "w-full py-3 pl-14 pr-5 rounded-full bg-gray-800 outline-none"
+                            : "w-full py-3 pl-14 pr-5 rounded-full bg-[#EFF3F4] outline-none"
+                    }
                 />
             </div>
         </div>

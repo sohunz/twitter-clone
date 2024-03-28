@@ -12,6 +12,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import SeeMore from "../modal/SeeMore";
+import ThemeContext from "../contexts/themes/ThemeContext";
 
 const FollowingCard = () => {
     const data = useContext(DataContext);
@@ -95,12 +96,18 @@ const FollowingCard = () => {
     //     }
     // };
 
+    const { theme } = useContext(ThemeContext);
+
     return (
         <div>
             {posts.map((item, index) => {
                 return (
                     <div
-                        className="w-full flex gap-3 items-start border-gray-700 border-b pb-5 mt-5"
+                        className={
+                            theme === "dark"
+                                ? "w-full flex gap-3 items-start border-gray-700 border-b pb-5 mt-5"
+                                : "w-full flex gap-3 items-start border-gray-200 border-b pb-5 mt-5"
+                        }
                         key={item.id}
                     >
                         <Link
@@ -119,7 +126,13 @@ const FollowingCard = () => {
                                 className="inline-flex items-center gap-2"
                             >
                                 <span className="flex items-center gap-1">
-                                    <p className="font-semibold text-[17px]">
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "font-semibold text-[17px]"
+                                                : "font-bold text-gray-800 text-[17px]"
+                                        }
+                                    >
                                         Sohunz
                                     </p>
                                     <RiVerifiedBadgeFill
@@ -128,17 +141,39 @@ const FollowingCard = () => {
                                     />
                                 </span>
                                 <div className="flex items-center gap-0">
-                                    <p className="text-gray-400">@sohunz</p>
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-600"
+                                        }
+                                    >
+                                        @sohunz
+                                    </p>
                                     <div className="">
                                         <PiDotLight />
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-500"
+                                        }
+                                    >
                                         {item.createDate}
                                     </p>
                                 </div>
                             </Link>
                             <div>
-                                <p className="text-gray-200">{item.title}</p>
+                                <p
+                                    className={
+                                        theme === "dark"
+                                            ? "text-gray-200"
+                                            : "text-gray-700"
+                                    }
+                                >
+                                    {item.title}
+                                </p>
                                 <div className="rounded-2xl overflow-hidden mt-5 max-w-[538px] max-h-[660px]">
                                     <img src={item.image} />
                                 </div>
@@ -146,18 +181,38 @@ const FollowingCard = () => {
                                     <div className="flex items-center gap-2">
                                         <IoChatboxOutline
                                             size={18}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             27
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <FaRetweet
                                             size={20}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             123
                                         </p>
                                     </div>
@@ -187,12 +242,12 @@ const FollowingCard = () => {
                                         <div className="flex items-center gap-2">
                                             <FaRegHeart
                                                 size={16}
-                                                className="text-gray-400 cursor-pointer"
+                                                className="text-gray-500 cursor-pointer"
                                                 onClick={() =>
                                                     toggleLike(item.id)
                                                 }
                                             />
-                                            <p className="text-[14px] text-gray-400">
+                                            <p className="text-[14px] text-gray-500">
                                                 {item.count}
                                             </p>
                                         </div>
@@ -200,18 +255,38 @@ const FollowingCard = () => {
                                     <div className="flex items-center gap-2">
                                         <IoIosStats
                                             size={17}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             2,5K
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <FaRegBookmark
                                             size={16}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             67
                                         </p>
                                     </div>

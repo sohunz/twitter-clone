@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RiMoreLine } from "react-icons/ri";
 import { FaHeart } from "react-icons/fa";
 import { PiDotLight } from "react-icons/pi";
+import ThemeContext from "../../../contexts/themes/ThemeContext";
 
 const All = () => {
+    const { theme } = useContext(ThemeContext);
     return (
         <>
-            <div className=" hover:bg-gray-800 py-5">
+            <div
+                className={
+                    theme === "dark"
+                        ? " hover:bg-gray-800 py-5"
+                        : " hover:bg-[#EFF3F4] py-5"
+                }
+            >
                 <div className="px-5">
                     <div className="flex justify-between items-center px-2 duration-200  rounded-full cursor-pointer">
                         <div className="flex gap-3 items-start">
@@ -22,7 +30,13 @@ const All = () => {
                                     <p className="font-bold text-[16px]">
                                         Sohunz
                                     </p>
-                                    <p className="text-gray-400 text-sm">
+                                    <p
+                                        className={
+                                            theme == "dark"
+                                                ? "text-gray-400 text-sm"
+                                                : "text-gray-500 text-sm"
+                                        }
+                                    >
                                         @sohunz
                                     </p>
                                 </div>

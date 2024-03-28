@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import CommunityNav from "./CommunityNav";
 import { RiMoreLine } from "react-icons/ri";
+import ThemeContext from "../../../contexts/themes/ThemeContext";
 
 const Explore = () => {
+    const { theme } = useContext(ThemeContext);
     return (
         <div className="w-full border-gray-700 border-r">
             <div className="sticky z-50 top-0">
@@ -12,7 +14,13 @@ const Explore = () => {
                 <p className="px-5 mt-5 font-bold text-xl mb-5">
                     Discover Communities
                 </p>
-                <div className="px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4">
+                <div
+                    className={
+                        theme === "dark"
+                            ? "px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4"
+                            : "px-5 mb-3 flex justify-between hover:bg-[#EFF3F4] py-4"
+                    }
+                >
                     <div className="flex gap-5">
                         <div className=" rounded-xl overflow-hidden w-[100px] h-[100px]">
                             <img
@@ -24,15 +32,27 @@ const Explore = () => {
                         <div className="flex flex-col justify-between">
                             <div>
                                 <p className="font-bold">Twitter</p>
-                                <p className="text-sm">
+                                <p className="text-sm font-semibold">
                                     590K{" "}
-                                    <span className="text-gray-400">
+                                    <span
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-500"
+                                        }
+                                    >
                                         Members
                                     </span>
                                 </p>
                             </div>
                             <div className="inline-flex">
-                                <p className=" bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer">
+                                <p
+                                    className={
+                                        theme === "dark"
+                                            ? " bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer"
+                                            : " bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer text-white"
+                                    }
+                                >
                                     Join
                                 </p>
                             </div>
@@ -42,7 +62,7 @@ const Explore = () => {
                         <RiMoreLine size={18} />
                     </div>
                 </div>
-                <div className="px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4">
+                {/* <div className="px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4">
                     <div className="flex gap-5">
                         <div className=" rounded-xl overflow-hidden w-[100px] h-[100px]">
                             <img
@@ -101,7 +121,7 @@ const Explore = () => {
                     <div className="pt-1">
                         <RiMoreLine size={18} />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
