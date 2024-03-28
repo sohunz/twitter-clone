@@ -26,7 +26,16 @@ const EditPost = () => {
     }, [data]);
 
     const dataFiltered = posts.filter((item) => item.id === id);
-    console.log(dataFiltered);
+    // console.log(dataFiltered);
+
+    const img = dataFiltered.map((item) => item.image);
+    // console.log(img[0]);
+
+    const count = dataFiltered.map((item) => item.count);
+    // console.log(count[0]);
+
+    const isLiked = dataFiltered.map((item) => item.isLiked);
+    console.log(isLiked[0]);
 
     const scrollToTop = () => {
         window.scrollTo(0, 0);
@@ -37,8 +46,9 @@ const EditPost = () => {
             if (newTitle.length !== 0) {
                 await axios.put(`http://localhost:8000/posts/${id}`, {
                     title: newTitle,
-                    image: dataFiltered.map((item) => item.image),
-                    // image: "",
+                    image: img[0],
+                    count: count[0],
+                    isLiked: isLiked[0],
                 });
             } else {
                 setNewTitle(dataFiltered.map((item) => item.title));
