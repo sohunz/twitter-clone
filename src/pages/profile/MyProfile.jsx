@@ -16,11 +16,23 @@ const MyProfile = () => {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div className="w-full border-gray-700 border-r">
+        <div
+            className={
+                theme === "dark"
+                    ? "w-full border-gray-700 border-r"
+                    : "w-full border-gray-200 border-r"
+            }
+        >
             <div className="sticky z-50 top-0">
                 <MyProfileNav />
             </div>
-            <div className="border-gray-700 border-b">
+            <div
+                className={
+                    theme === "dark"
+                        ? "border-gray-700 border-b"
+                        : "border-gray-200 border-b"
+                }
+            >
                 <div className="bg-[#425364] w-full h-[190px] relative  z-0">
                     <div className="w-full h-[190px] overflow-hidden">
                         <img
@@ -165,7 +177,9 @@ const MyProfile = () => {
                                 }  cursor-pointer ${
                                     activeTab === "Posts"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
-                                        : "text-gray-400"
+                                        : theme === "dark"
+                                        ? "text-gray-400"
+                                        : "text-gray-600"
                                 }`}
                                 onClick={() => handleTabClick("Posts")}
                             >
@@ -180,7 +194,9 @@ const MyProfile = () => {
                                 }  cursor-pointer ${
                                     activeTab === "Replies"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
-                                        : "text-gray-400"
+                                        : theme === "dark"
+                                        ? "text-gray-400"
+                                        : "text-gray-600"
                                 }`}
                                 onClick={() => handleTabClick("Replies")}
                             >
@@ -195,7 +211,9 @@ const MyProfile = () => {
                                 }  cursor-pointer ${
                                     activeTab === "Highlights"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
-                                        : "text-gray-400"
+                                        : theme === "dark"
+                                        ? "text-gray-400"
+                                        : "text-gray-600"
                                 }`}
                                 onClick={() => handleTabClick("Highlights")}
                             >
@@ -210,7 +228,9 @@ const MyProfile = () => {
                                 }  cursor-pointer ${
                                     activeTab === "Articls"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
-                                        : "text-gray-400"
+                                        : theme === "dark"
+                                        ? "text-gray-400"
+                                        : "text-gray-600"
                                 }`}
                                 onClick={() => handleTabClick("Articls")}
                             >
@@ -225,7 +245,9 @@ const MyProfile = () => {
                                 }  cursor-pointer ${
                                     activeTab === "Media"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
-                                        : "text-gray-400"
+                                        : theme === "dark"
+                                        ? "text-gray-400"
+                                        : "text-gray-600"
                                 }`}
                                 onClick={() => handleTabClick("Media")}
                             >
@@ -240,7 +262,9 @@ const MyProfile = () => {
                                 }  cursor-pointer ${
                                     activeTab === "Likes"
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
-                                        : "text-gray-400"
+                                        : theme === "dark"
+                                        ? "text-gray-400"
+                                        : "text-gray-600"
                                 }`}
                                 onClick={() => handleTabClick("Likes")}
                             >

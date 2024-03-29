@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { PiDotLight } from "react-icons/pi";
 import { IoChatboxOutline } from "react-icons/io5";
@@ -10,9 +10,12 @@ import { RiMoreLine } from "react-icons/ri";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
+import ThemeContext from "../../../contexts/themes/ThemeContext";
+import { FaRegComment } from "react-icons/fa";
 
 const Media = () => {
     const [media, setMedia] = useState([]);
+    const { theme } = useContext(ThemeContext);
 
     const fetchMedia = async () => {
         try {
@@ -49,7 +52,11 @@ const Media = () => {
             {handleMedia.map((item, index) => {
                 return (
                     <div
-                        className="w-full flex gap-3 items-start border-gray-700 border-b pb-5 mt-5"
+                        className={
+                            theme === "dark"
+                                ? "w-full flex gap-3 items-start border-gray-700 border-b pb-5 mt-5"
+                                : "w-full flex gap-3 items-start border-gray-200 border-b pb-5 mt-5"
+                        }
                         key={item.id}
                     >
                         <Link
@@ -68,7 +75,13 @@ const Media = () => {
                                 className="inline-flex items-center gap-2"
                             >
                                 <span className="flex items-center gap-1">
-                                    <p className="font-semibold text-[17px]">
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "font-semibold text-[17px]"
+                                                : "font-bold text-gray-800 text-[17px]"
+                                        }
+                                    >
                                         Sohunz
                                     </p>
                                     <RiVerifiedBadgeFill
@@ -77,36 +90,78 @@ const Media = () => {
                                     />
                                 </span>
                                 <div className="flex items-center gap-0">
-                                    <p className="text-gray-400">@sohunz</p>
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-600"
+                                        }
+                                    >
+                                        @sohunz
+                                    </p>
                                     <div className="">
                                         <PiDotLight />
                                     </div>
-                                    <p className="text-gray-400">
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-500"
+                                        }
+                                    >
                                         {item.createDate}
                                     </p>
                                 </div>
                             </Link>
                             <div>
-                                <p className="text-gray-200">{item.title}</p>
+                                <p
+                                    className={
+                                        theme === "dark"
+                                            ? "text-gray-200"
+                                            : "text-gray-700"
+                                    }
+                                >
+                                    {item.title}
+                                </p>
                                 <div className="rounded-2xl overflow-hidden mt-5 max-w-[538px] max-h-[660px]">
                                     <img src={item.image} />
                                 </div>
                                 <div className="mt-5 flex items-center justify-between">
                                     <div className="flex items-center gap-2">
-                                        <IoChatboxOutline
+                                        <FaRegComment
                                             size={18}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             27
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <FaRetweet
                                             size={20}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             123
                                         </p>
                                     </div>
@@ -133,18 +188,38 @@ const Media = () => {
                                     <div className="flex items-center gap-2">
                                         <IoIosStats
                                             size={17}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             2,5K
                                         </p>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <FaRegBookmark
                                             size={16}
-                                            className="text-gray-400"
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-gray-400"
+                                                    : "text-gray-500"
+                                            }
                                         />
-                                        <p className="text-[14px] text-gray-400">
+                                        <p
+                                            className={
+                                                theme === "dark"
+                                                    ? "text-[14px] text-gray-400"
+                                                    : "text-[14px] text-gray-500"
+                                            }
+                                        >
                                             67
                                         </p>
                                     </div>

@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import SeeMore from "../modal/SeeMore";
 import ThemeContext from "../contexts/themes/ThemeContext";
+import { FaRegComment } from "react-icons/fa";
+import { FaRegMessage } from "react-icons/fa6";
 
 const FollowingCard = () => {
     const data = useContext(DataContext);
@@ -179,7 +181,7 @@ const FollowingCard = () => {
                                 </div>
                                 <div className="mt-5 flex items-center justify-between">
                                     <div className="flex items-center gap-2">
-                                        <IoChatboxOutline
+                                        <FaRegComment
                                             size={18}
                                             className={
                                                 theme === "dark"
