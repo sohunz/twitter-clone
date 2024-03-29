@@ -5,7 +5,13 @@ import ThemeContext from "../../../contexts/themes/ThemeContext";
 const Explore = () => {
     const { theme } = useContext(ThemeContext);
     return (
-        <div className="w-full border-gray-700 border-r">
+        <div
+            className={
+                theme === "dark"
+                    ? "w-full border-gray-700 border-r"
+                    : "w-full border-gray-200 border-r"
+            }
+        >
             <div className="sticky z-50 top-0">
                 <MessageNav />
             </div>
