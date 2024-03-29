@@ -17,8 +17,8 @@ const Explore = () => {
                 <div
                     className={
                         theme === "dark"
-                            ? "px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4"
-                            : "px-5 mb-3 flex justify-between hover:bg-[#EFF3F4] py-4"
+                            ? "px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4 cursor-pointer"
+                            : "px-5 mb-3 flex justify-between hover:bg-[#EFF3F4] py-4 cursor-pointer"
                     }
                 >
                     <div className="flex gap-5">

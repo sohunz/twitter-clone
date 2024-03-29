@@ -89,7 +89,13 @@ const MyProfile = () => {
 
                             <div className=" text-gray-400 flex items-center gap-2">
                                 <div className="flex items-center gap-1">
-                                    <GrLocation />
+                                    <GrLocation
+                                        className={
+                                            theme === "dark"
+                                                ? ""
+                                                : " text-gray-600"
+                                        }
+                                    />
                                     <p
                                         className={
                                             theme === "dark"
@@ -101,24 +107,26 @@ const MyProfile = () => {
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-1">
-                                    <RiLink size={22} className="pt-1" />
+                                    <RiLink
+                                        size={22}
+                                        className={
+                                            theme === "dark"
+                                                ? "pt-1"
+                                                : "pt-1 text-gray-600"
+                                        }
+                                    />
                                     <p className="text-[#1D9BF0] my-2">
-                                        <a
-                                            href=""
-                                            className={
-                                                theme === "dark"
-                                                    ? "text-gray-400"
-                                                    : "text-gray-600"
-                                            }
-                                        >
-                                            about.x.com
-                                        </a>
+                                        <a href="">about.x.com</a>
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <PiCalendarDuotone
                                         size={22}
-                                        className="pt-1"
+                                        className={
+                                            theme === "dark"
+                                                ? "pt-1"
+                                                : "pt-1 text-gray-600"
+                                        }
                                     />
                                     <p
                                         className={
@@ -138,8 +146,8 @@ const MyProfile = () => {
                                 <span
                                     className={
                                         theme === "dark"
-                                            ? "text-gray-400"
-                                            : "text-gray-600"
+                                            ? "text-gray-400 font-semibold"
+                                            : "text-gray-500 font-semibold"
                                     }
                                 >
                                     Following
@@ -150,17 +158,23 @@ const MyProfile = () => {
                                 <span
                                     className={
                                         theme === "dark"
-                                            ? "text-gray-400"
-                                            : "text-gray-600"
+                                            ? "text-gray-400 font-semibold"
+                                            : "text-gray-500 font-semibold"
                                     }
                                 >
-                                    Follower
+                                    Followers
                                 </span>
                             </p>
                         </div>
                     </div>
                     <div>
-                        <button className="border-gray-600 border py-[5px] px-5 rounded-full mt-5">
+                        <button
+                            className={
+                                theme === "dark"
+                                    ? "border-gray-600 border py-[5px] px-5 rounded-full mt-5"
+                                    : "border-gray-300 border py-[5px] px-5 rounded-full mt-5 font-semibold"
+                            }
+                        >
                             Edit profile
                         </button>
                     </div>
@@ -179,7 +193,7 @@ const MyProfile = () => {
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : theme === "dark"
                                         ? "text-gray-400"
-                                        : "text-gray-600"
+                                        : "text-gray-600 font-semibold"
                                 }`}
                                 onClick={() => handleTabClick("Posts")}
                             >
@@ -196,7 +210,7 @@ const MyProfile = () => {
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : theme === "dark"
                                         ? "text-gray-400"
-                                        : "text-gray-600"
+                                        : "text-gray-600 font-semibold"
                                 }`}
                                 onClick={() => handleTabClick("Replies")}
                             >
@@ -213,7 +227,7 @@ const MyProfile = () => {
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : theme === "dark"
                                         ? "text-gray-400"
-                                        : "text-gray-600"
+                                        : "text-gray-600 font-semibold"
                                 }`}
                                 onClick={() => handleTabClick("Highlights")}
                             >
@@ -230,7 +244,7 @@ const MyProfile = () => {
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : theme === "dark"
                                         ? "text-gray-400"
-                                        : "text-gray-600"
+                                        : "text-gray-600 font-semibold"
                                 }`}
                                 onClick={() => handleTabClick("Articls")}
                             >
@@ -247,7 +261,7 @@ const MyProfile = () => {
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : theme === "dark"
                                         ? "text-gray-400"
-                                        : "text-gray-600"
+                                        : "text-gray-600 font-semibold"
                                 }`}
                                 onClick={() => handleTabClick("Media")}
                             >
@@ -264,7 +278,7 @@ const MyProfile = () => {
                                         ? "border-b-2 border-[#1D9BF0] font-semibold"
                                         : theme === "dark"
                                         ? "text-gray-400"
-                                        : "text-gray-600"
+                                        : "text-gray-600 font-semibold  "
                                 }`}
                                 onClick={() => handleTabClick("Likes")}
                             >

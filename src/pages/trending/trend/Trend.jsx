@@ -24,7 +24,7 @@ const Trend = () => {
                                 className={
                                     theme === "dark"
                                         ? "text-gray-400 text-[13px]"
-                                        : "text-gray-600 text-[13px]"
+                                        : "text-gray-500 font-semibold text-[13px]"
                                 }
                             >
                                 {item.category}
@@ -42,7 +42,7 @@ const Trend = () => {
                                 className={
                                     theme === "dark"
                                         ? "text-gray-400 text-[13px]"
-                                        : "text-gray-600 text-[13px]"
+                                        : "text-gray-500 text-[13px] font-semibold"
                                 }
                             >
                                 {item.posts} posts

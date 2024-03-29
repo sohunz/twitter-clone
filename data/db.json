@@ -4,9 +4,9 @@
       "id": "88b4",
       "title": "First Tweet!",
       "image": "",
-      "count": 0,
+      "count": 1,
       "createDate": "Mar 28",
-      "isLiked": false
+      "isLiked": true
     },
     {
       "id": "df81",

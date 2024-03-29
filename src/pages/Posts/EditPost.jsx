@@ -3,9 +3,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import DataContext from "../../contexts/DataContext";
+import ThemeContext from "../../contexts/themes/ThemeContext";
 
 const EditPost = () => {
     const { id } = useParams();
+
+    const { theme } = useContext(ThemeContext);
 
     const [newTitle, setNewTitle] = useState([]);
     const data = useContext(DataContext);
@@ -68,18 +71,26 @@ const EditPost = () => {
 
     return (
         <div className=" mt-5 px-10">
-            <p className="font-bold text-xl mb-5 text-center">Edit Post</p>
+            <p className="font-bold text-xl mb-5">Edit Post</p>
             <input
                 type="text"
                 value={newTitle}
                 placeholder={dataFiltered.map((item) => item.title)}
-                className="w-full py-3 pl-7 pr-5 rounded-full bg-gray-800 outline-none mb-3"
+                className={
+                    theme === "dark"
+                        ? "w-full py-3 pl-7 pr-5 rounded-full bg-gray-800 outline-none mb-3"
+                        : "w-full py-3 pl-7 pr-5 rounded-full bg-[#EFF3F4] outline-none mb-3"
+                }
                 onChange={(e) => setNewTitle(e.target.value)}
             />{" "}
             <div className="mt-3">
                 <button
                     onClick={() => editPostTitle(id)}
-                    className=" bg-[#1D9BF0] px-7 py-[9px] rounded-full cursor-pointer"
+                    className={
+                        theme === "dark"
+                            ? " bg-[#1D9BF0] px-7 py-[9px] rounded-full cursor-pointer"
+                            : " bg-[#1D9BF0] px-7 py-[9px] rounded-full cursor-pointer text-white"
+                    }
                 >
                     Update
                 </button>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import ThemeContext from "../contexts/themes/ThemeContext";
 
 const SeeMore = ({ id }) => {
     // delete
@@ -15,18 +16,29 @@ const SeeMore = ({ id }) => {
     const scrollToTop = () => {
         window.scrollTo(0, 0);
     };
+
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <ul className="absolute right-0 rounded-lg bg-[#15202B] flex flex-col overflow-hidden">
+        <ul className="absolute right-0 rounded-lg flex flex-col overflow-hidden">
             <Link
                 to={`/following/${id}`}
-                className="bg-gray-700 py-2 px-5"
+                className={
+                    theme === "dark"
+                        ? "bg-gray-700 py-2 px-5"
+                        : "bg-gray-200 py-2 px-5"
+                }
                 onClick={scrollToTop}
             >
                 Edit
             </Link>
 
             <li
-                className="bg-gray-700 py-2 px-5"
+                className={
+                    theme === "dark"
+                        ? "bg-gray-700 py-2 px-5"
+                        : "bg-gray-200 py-2 px-5"
+                }
                 onClick={() => deletePost(id)}
             >
                 Delete

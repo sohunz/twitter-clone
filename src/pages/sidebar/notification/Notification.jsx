@@ -37,11 +37,11 @@ const Notification = () => {
                             className={`w-full text-center py-4 ${
                                 theme === "dark"
                                     ? "hover:bg-gray-700"
-                                    : "hover:bg-[#EFF3F4]"
+                                    : "hover:bg-[#EFF3F4] font-semibold"
                             } duration-200 cursor-pointer ${
                                 activeTab === "All"
                                     ? "border-b-2 border-[#1D9BF0]"
-                                    : ""
+                                    : "text-gray-400"
                             }`}
                             onClick={() => handleTabClick("All")}
                         >
@@ -52,11 +52,11 @@ const Notification = () => {
                             className={`w-full text-center py-4 ${
                                 theme === "dark"
                                     ? "hover:bg-gray-700"
-                                    : "hover:bg-[#EFF3F4]"
+                                    : "hover:bg-[#EFF3F4] font-semibold"
                             } duration-200 cursor-pointer ${
                                 activeTab === "Verified"
                                     ? "border-b-2 border-blue-500"
-                                    : ""
+                                    : "text-gray-400"
                             }`}
                             onClick={() => handleTabClick("Verified")}
                         >
@@ -67,11 +67,11 @@ const Notification = () => {
                             className={`w-full text-center py-4 ${
                                 theme === "dark"
                                     ? "hover:bg-gray-700"
-                                    : "hover:bg-[#EFF3F4]"
+                                    : "hover:bg-[#EFF3F4] font-semibold"
                             } duration-200 cursor-pointer ${
                                 activeTab === "Mentions"
                                     ? "border-b-2 border-blue-500"
-                                    : ""
+                                    : "text-gray-400"
                             }`}
                             onClick={() => handleTabClick("Mentions")}
                         >

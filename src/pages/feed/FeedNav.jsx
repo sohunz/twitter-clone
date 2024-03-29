@@ -26,7 +26,7 @@ const FeedNav = () => {
                         className={`w-full font-semibold text-center py-4 ${
                             theme === "dark"
                                 ? "hover:bg-gray-700"
-                                : "hover:bg-[#EFF3F4]"
+                                : "hover:bg-[#F0F0F0]"
                         } cursor-pointer ${
                             activeTab === "For You"
                                 ? theme === "dark"
@@ -43,7 +43,7 @@ const FeedNav = () => {
                         className={`w-full font-semibold text-center py-4 ${
                             theme === "dark"
                                 ? "hover:bg-gray-700"
-                                : "hover:bg-[#EFF3F4]"
+                                : "hover:bg-[#F0F0F0]"
                         } cursor-pointer  ${
                             activeTab === "Following"
                                 ? theme === "dark"

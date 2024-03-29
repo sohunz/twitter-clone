@@ -147,7 +147,7 @@ const FollowingCard = () => {
                                         className={
                                             theme === "dark"
                                                 ? "text-gray-400"
-                                                : "text-gray-600"
+                                                : "text-[#536471]"
                                         }
                                     >
                                         @sohunz
@@ -159,7 +159,7 @@ const FollowingCard = () => {
                                         className={
                                             theme === "dark"
                                                 ? "text-gray-400"
-                                                : "text-gray-500"
+                                                : "text-[#536471]"
                                         }
                                     >
                                         {item.createDate}
@@ -171,7 +171,7 @@ const FollowingCard = () => {
                                     className={
                                         theme === "dark"
                                             ? "text-gray-200"
-                                            : "text-gray-700"
+                                            : "text-gray-800"
                                     }
                                 >
                                     {item.title}

@@ -51,7 +51,9 @@ const Explore = () => {
                                 </div>
                                 <div>
                                     <span className="flex items-center gap-1">
-                                        <p className="font-bold">{item.name}</p>
+                                        <p className="font-semibold">
+                                            {item.name}
+                                        </p>
                                         <RiVerifiedBadgeFill
                                             size={16}
                                             className="text-[#1D9BF0]"

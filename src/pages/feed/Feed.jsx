@@ -11,7 +11,7 @@ const Feed = () => {
             className={
                 theme === "dark"
                     ? "w-full border-gray-700 border-r bg-[#15202B]"
-                    : "w-full border-gray-700 border-r text-black bg-white"
+                    : "w-full border-gray-200 border-r text-black bg-white"
             }
         >
             <div className="sticky z-50 top-0">

@@ -14,7 +14,11 @@ const ExploreNav = () => {
         >
             <div className="flex items-center px-5">
                 <div
-                    className="rounded-full p-3 cursor-pointer hover:bg-gray-700"
+                    className={
+                        theme === "dark"
+                            ? "rounded-full p-3 cursor-pointer hover:bg-gray-700"
+                            : "rounded-full p-3 cursor-pointer hover:bg-[#F0F0F0]"
+                    }
                     onClick={() => window.history.back()}
                 >
                     <BiArrowBack size={19} />
