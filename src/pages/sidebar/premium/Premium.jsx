@@ -119,7 +119,7 @@ const Explore = () => {
                             className={`w-[50%] ${
                                 theme === "dark"
                                     ? "bg-[#2a323d]"
-                                    : "bg-gray-200"
+                                    : "isolate aspect-video rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5"
                             } rounded-xl p-5 text-left ${
                                 selectedBox === "individual"
                                     ? "outline-[#1D9BF0] outline cursor-pointer"
@@ -139,7 +139,7 @@ const Explore = () => {
                             className={`${
                                 theme === "dark"
                                     ? "bg-[#2a323d]"
-                                    : "bg-gray-200"
+                                    : "isolate aspect-video rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5"
                             } rounded-xl w-[50%] p-5 text-left ${
                                 selectedBox === "organization"
                                     ? "outline-[#1D9BF0] outline cursor-pointer"
