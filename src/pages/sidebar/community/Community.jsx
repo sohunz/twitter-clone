@@ -68,7 +68,13 @@ const Explore = () => {
                         <RiMoreLine size={18} />
                     </div>
                 </div>
-                {/* <div className="px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4">
+                <div
+                    className={
+                        theme === "dark"
+                            ? "px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4 cursor-pointer"
+                            : "px-5 mb-3 flex justify-between hover:bg-[#EFF3F4] py-4 cursor-pointer"
+                    }
+                >
                     <div className="flex gap-5">
                         <div className=" rounded-xl overflow-hidden w-[100px] h-[100px]">
                             <img
@@ -80,15 +86,27 @@ const Explore = () => {
                         <div className="flex flex-col justify-between">
                             <div>
                                 <p className="font-bold">Elon Musk</p>
-                                <p className="text-sm">
-                                    375K{" "}
-                                    <span className="text-gray-400">
+                                <p className="text-sm font-semibold">
+                                    346K{" "}
+                                    <span
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-500"
+                                        }
+                                    >
                                         Members
                                     </span>
                                 </p>
                             </div>
                             <div className="inline-flex">
-                                <p className=" bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer">
+                                <p
+                                    className={
+                                        theme === "dark"
+                                            ? " bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer"
+                                            : " bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer text-white"
+                                    }
+                                >
                                     Join
                                 </p>
                             </div>
@@ -98,7 +116,13 @@ const Explore = () => {
                         <RiMoreLine size={18} />
                     </div>
                 </div>
-                <div className="px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4">
+                <div
+                    className={
+                        theme === "dark"
+                            ? "px-5 mb-3 flex justify-between hover:bg-[#1E2732] py-4 cursor-pointer"
+                            : "px-5 mb-3 flex justify-between hover:bg-[#EFF3F4] py-4 cursor-pointer"
+                    }
+                >
                     <div className="flex gap-5">
                         <div className=" rounded-xl overflow-hidden w-[100px] h-[100px]">
                             <img
@@ -109,16 +133,28 @@ const Explore = () => {
                         </div>
                         <div className="flex flex-col justify-between">
                             <div>
-                                <p className="font-bold">Travis Scott Fan</p>
-                                <p className="text-sm">
-                                    27K{" "}
-                                    <span className="text-gray-400">
+                                <p className="font-bold">Travis Scott</p>
+                                <p className="text-sm font-semibold">
+                                    149K{" "}
+                                    <span
+                                        className={
+                                            theme === "dark"
+                                                ? "text-gray-400"
+                                                : "text-gray-500"
+                                        }
+                                    >
                                         Members
                                     </span>
                                 </p>
                             </div>
                             <div className="inline-flex">
-                                <p className=" bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer">
+                                <p
+                                    className={
+                                        theme === "dark"
+                                            ? " bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer"
+                                            : " bg-[#1D9BF0] px-5 py-1 text-sm rounded-full cursor-pointer text-white"
+                                    }
+                                >
                                     Join
                                 </p>
                             </div>
@@ -127,7 +163,7 @@ const Explore = () => {
                     <div className="pt-1">
                         <RiMoreLine size={18} />
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );

@@ -27,14 +27,12 @@ import Likes from "./pages/profile/profile_pages/Likes";
 import Media from "./pages/profile/profile_pages/Media";
 import Replies from "./pages/profile/profile_pages/Replies";
 import Setting from "./settings/Setting";
-// import ThemeProvider from "./contexts/themes/ThemeProvider";
+
 import ThemeContext from "./contexts/themes/ThemeContext";
 
 const App = () => {
     const savedTheme = localStorage.getItem("theme") || "dark";
     const [theme, setTheme] = useState(savedTheme);
-
-    // Update local storage whenever theme changes
     useEffect(() => {
         localStorage.setItem("theme", theme);
     }, [theme]);

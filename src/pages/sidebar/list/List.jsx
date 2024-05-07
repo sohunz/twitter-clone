@@ -39,7 +39,7 @@ const Explore = () => {
                             <div className="flex flex-col">
                                 <div>
                                     <p className="font-bold">
-                                        Cristiano Ronaldo Lover
+                                        Cristiano Ronaldo
                                     </p>
                                     <p
                                         className={
@@ -96,11 +96,17 @@ const Explore = () => {
                         />
                     </div>
                 </div>
-                {/* <div className="px-5 mb-3 flex justify-between items-center hover:bg-[#1E2732] py-4">
+                <div
+                    className={
+                        theme === "dark"
+                            ? "px-5 mb-3 flex justify-between items-center hover:bg-[#1E2732] py-4 cursor-pointer"
+                            : "px-5 mb-3 flex justify-between items-center hover:bg-[#EFF3F4] py-4 cursor-pointer"
+                    }
+                >
                     <div className="flex gap-5">
                         <div className="rounded-xl overflow-hidden w-[70px] h-[70px]">
                             <img
-                                src="https://pbs.twimg.com/card_img/1768261730034225152/AUimRM37?format=png&name=small"
+                                src="https://i.pinimg.com/originals/36/91/77/3691771e78f9e7e8cbf76eab68851831.jpg"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -108,34 +114,73 @@ const Explore = () => {
                         <div className="flex flex-col justify-between">
                             <div className="flex flex-col">
                                 <div>
-                                    <p className="font-bold">SamSung</p>
-                                    <p className="text-[13px] text-gray-400">
-                                        123K Members
+                                    <p className="font-bold">Nissan GTR R35</p>
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-[13px] text-gray-400"
+                                                : "text-[13px] text-gray-500"
+                                        }
+                                    >
+                                        350K Members
                                     </p>
                                 </div>
                                 <div className="flex text-[13px] gap-2 mt-2">
-                                    <p className="bg-gray-700 rounded-full px-3">
-                                        #samsung
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "bg-gray-700 rounded-full px-3"
+                                                : "bg-gray-200 rounded-full px-3"
+                                        }
+                                    >
+                                        #cars
                                     </p>
-                                    <p className="bg-gray-700 rounded-full px-3">
-                                        #phone
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "bg-gray-700 rounded-full px-3"
+                                                : "bg-gray-200 rounded-full px-3"
+                                        }
+                                    >
+                                        #gtr
                                     </p>
-                                    <p className="bg-gray-700 rounded-full px-3">
-                                        #technology
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "bg-gray-700 rounded-full px-3"
+                                                : "bg-gray-200 rounded-full px-3"
+                                        }
+                                    >
+                                        #gtrfan
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="border p-2 bg-white rounded-full cursor-pointer">
-                        <IoAdd color="black" size={20} />
+                    <div
+                        className={
+                            theme === "dark"
+                                ? "border p-2 bg-white rounded-full cursor-pointer"
+                                : "border p-2 bg-black rounded-full cursor-pointer"
+                        }
+                    >
+                        <IoAdd
+                            color={theme === "dark" ? "black" : "white"}
+                            size={20}
+                        />
                     </div>
                 </div>
-                <div className="px-5 mb-3 flex justify-between items-center hover:bg-[#1E2732] py-4">
+                <div
+                    className={
+                        theme === "dark"
+                            ? "px-5 mb-3 flex justify-between items-center hover:bg-[#1E2732] py-4 cursor-pointer"
+                            : "px-5 mb-3 flex justify-between items-center hover:bg-[#EFF3F4] py-4 cursor-pointer"
+                    }
+                >
                     <div className="flex gap-5">
                         <div className="rounded-xl overflow-hidden w-[70px] h-[70px]">
                             <img
-                                src="https://qph.cf2.quoracdn.net/main-qimg-68d52a4c9747f85b66e6b385c1c707d2-lq"
+                                src="https://cdn.hashnode.com/res/hashnode/image/upload/v1513321478077/ByCWNxZMf.png"
                                 alt=""
                                 className="w-full h-full object-cover"
                             />
@@ -143,29 +188,64 @@ const Explore = () => {
                         <div className="flex flex-col justify-between">
                             <div className="flex flex-col">
                                 <div>
-                                    <p className="font-bold">Olivia Rodrigo</p>
-                                    <p className="text-[13px] text-gray-400">
-                                        40K Members
+                                    <p className="font-bold">
+                                        Front End Developer
+                                    </p>
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "text-[13px] text-gray-400"
+                                                : "text-[13px] text-gray-500"
+                                        }
+                                    >
+                                        480K Members
                                     </p>
                                 </div>
                                 <div className="flex text-[13px] gap-2 mt-2">
-                                    <p className="bg-gray-700 rounded-full px-3">
-                                        #song
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "bg-gray-700 rounded-full px-3"
+                                                : "bg-gray-200 rounded-full px-3"
+                                        }
+                                    >
+                                        #webdev
                                     </p>
-                                    <p className="bg-gray-700 rounded-full px-3">
-                                        #music
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "bg-gray-700 rounded-full px-3"
+                                                : "bg-gray-200 rounded-full px-3"
+                                        }
+                                    >
+                                        #frontend
                                     </p>
-                                    <p className="bg-gray-700 rounded-full px-3">
-                                        #oliviarodrido
+                                    <p
+                                        className={
+                                            theme === "dark"
+                                                ? "bg-gray-700 rounded-full px-3"
+                                                : "bg-gray-200 rounded-full px-3"
+                                        }
+                                    >
+                                        #webdevelopment
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="border p-2 bg-white rounded-full cursor-pointer">
-                        <IoAdd color="black" size={20} />
+                    <div
+                        className={
+                            theme === "dark"
+                                ? "border p-2 bg-white rounded-full cursor-pointer"
+                                : "border p-2 bg-black rounded-full cursor-pointer"
+                        }
+                    >
+                        <IoAdd
+                            color={theme === "dark" ? "black" : "white"}
+                            size={20}
+                        />
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );
